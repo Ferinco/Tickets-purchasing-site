@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outa the world</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="galaxy">
+    <section class="banner">
+      <div class="top">
+        <div class="navbar" id="navbar">
+          <ul class="navbar-one">
+            <li><a class="active nav-link" href="">Home</a></li>
+            <li><a class="nav-link" href="">Popular</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a class="nav-link" href="">FAQs</a></li>
+          </ul>
+          <ul class="navbar-two">
+            <li><a href="">log in</a></li>
+            <li><a href="signup.html">sign up</a></li>
+          </ul>
+        </div>
+        <ul class="mobile-navbar" id="mobile-navbar">
+          <div class="cancel">
+            <i class="fa fa-times" id="mobile-cancel"></i>
+          </div>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="">Popular</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">FAQs</a></li>
+          <li><a href="" id="login">log in</a></li>
+          <li><a href="signup.html" id="signup">sign up</a></li>
+        </ul>
+        <div class="mobile">
+          <i class="fa fa-bars" id="mobile"></i>
+        </div>
+      </div>
+      <div class="intro">
+        <p class="intro-header">Ready to take off to another planet?</p>
+        <p class="intro-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Natus, praesentium.
+          Quibusdam, nulla?
+        </p>
+      </div>
+      <div class="mid-button">
+        <button><a href="ticket.html">Check for Tickets</a></button>
+      </div>
+      <div class="ticket" id="ticket-form">
+        <div class="ticket-buttons" id="ticket-buttons">
+          <button id="reservations">Ticket Reservations</button>
+          <button id="bookings" onclick="bookingCheck()">Booking Check</button>
+        </div>
+        <div class="ticket-fields" id="ticket-fields">
+          <form onsubmit="calculatePrice(); return false;">
+            <div class="location field">
+              <label for="location"
+                ><i class="fas fa-map-marker-alt"></i> <span>location</span>
+              </label>
+
+              <select name="location" id="location">
+                <option value="Earth">Earth</option>
+                <option value="Mars">Mars</option>
+                <option value="Venus">Venus</option>
+                <option value="The Moon">The Moon</option>
+              </select>
+            </div>
+            <div class="destination field">
+              <label for="cars"
+                ><i class="far fa-compass"></i><span>destination</span>
+              </label>
+              <select name="destination" id="destination">
+                <option value="Mars">Mars</option>
+                <option value="Venus">Venus</option>
+                <option value="The Moon">The Moon</option>
+                <option value="Earth">Earth</option>
+              </select>
+            </div>
+            <div class="poeple field">
+              <label for="cars"
+                ><i class="fas fa-user-alt"></i><span>adult(s)</span>
+              </label>
+              <select name="adult" id="adult">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="destination field">
+              <label for="cars"
+                ><i class="fa fa-child"></i><span>child(ren)</span>
+              </label>
+              <select name="child" id="child">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <div class="date field">
+              <label for="cars"
+                ><i class="far fa-calendar-alt"></i><span>date</span>
+              </label>
+              <input type="date" id="datepicker" />
+            </div>
+            <div class="ticket-fields-button">
+              <button type="submit" id="form-submit">check</button>
+            </div>
+          </form>
+        </div>
+        <div class="booking-fields" id="booking-fields">
+          <div id="bookings-1"></div>
+          <div id="bookings-2"><p>you currently do not have any bookings here...</p></div>
+        </div>
+      </div>
+      <div id="paper"></div>
+      <div class="closure">
+        <p>Looking for travel ideas?</p>
+        <p class="link">Explore Map</p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about">
+        <div class="about-intro">
+          <p class="header">
+            Discovering new experiences <br />
+            by exploring space
+          </p>
+          <p class="body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+            adipisci illum natus eaque veniam aut? Saepe, necessitatibus. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quis, in pariatur
+            itaque debitis dignissimos, earum vel quam, nihil consectetur
+            voluptatum libero est quas. Similique itaque officiis corrupti est,
+            nesciunt fugit! Lorem ipsum dolor sit amet consectetur adipisicing
+            elit.
+          </p>
+        </div>
+        <div class="about-buttons">
+          <button id="mars-btn" onclick="showPlanet('mars')" class="active">
+            Mars
+          </button>
+          <button id="venus-btn" onclick="showPlanet('venus')">Venus</button>
+          <button id="earth-btn" onclick="showPlanet('earth')">Earth</button>
+          <button id="venus-btn" onclick="showPlanet('moon')">The Moon</button>
+        </div>
+        <div class="planet-info">
+          <div class="about-body" id="mars-info">
+            <div class="about-body-images" data-aos="fade-right">
+              <img src="Images/mars1.jpg" alt="" width="250vw" />
+              <img
+                src="Images/mars1.jpg"
+                alt=""
+                width="250px"
+                style="margin-left: 20px"
+              />
+              <img
+                id="last-image"
+                src="Images/mars3.avif"
+                alt=""
+                width="525px"
+                height="300px"
+                style="margin-top: 20px"
+              />
+            </div>
+            <div class="about-body-about">
+              <div class="hero">
+                <p class="hero-header">Mars</p>
+                <p class="hero-body">- The Red Planet</p>
+              </div>
+              <div class="intro">
+                <p>
+                  Mars, often referred to as the "Red Planet," is the fourth
+                  planet from the sun and has a thin atmosphere primarily
+                  composed of carbon dioxide. Its dusty surface and evidence of
+                  past water make it a focal point for astrobiology and future
+                  exploration.
+                  <a href="">read more</a>
+                </p>
+              </div>
+
+              <div class="numbers">
+                <div class="distance">
+                  <h4>Distance from Earth</h4>
+                  <p class="number">54,609,570 <span class="km">km</span></p>
+                </div>
+                <div class="visits">
+                  <h4>Number of Visits</h4>
+                  <p class="number">321,456</p>
+                </div>
+              </div>
+              <div class="people">
+                <div class="ratings">
+                  <h4>Ratings</h4>
+                  <p>1 2 3 4 5</p>
+                  <p id="rate">4.5</p>
+                </div>
+                <div class="price">
+                  <h4>Price per ticket</h4>
+                  <p class="number amount">$ 987,865</p>
+                </div>
+              </div>
+              <div class="button"><button>Buy Ticket Now</button></div>
+            </div>
+          </div>
+          <div class="about-body" id="venus-info">
+            <div class="about-body-images">
+              <img src="Images/venus1.jpg" alt="" width="250px" />
+              <img
+                src="Images/venus2.jpg"
+                alt=""
+                width="250px"
+                style="margin-left: 20px"
+              />
+              <img
+                id="last-image"
+                src="Images/venus3.avif"
+                alt=""
+                width="525px"
+                height="300px"
+                style="margin-top: 20px"
+              />
+            </div>
+            <div class="about-body-about">
+              <div class="hero">
+                <p class="hero-header">Venus</p>
+                <p class="hero-body">- Morning Star</p>
+              </div>
+              <div class="intro">
+                <p>
+                  Venus, the second planet from the sun, is often called the
+                  "morning star". It has a thick, that traps heat, leading to
+                  surface temperatures that can melt lead. Despite its harsh
+                  conditions, Venus has been a target for exploration, with
+                  scientists searching for clues about its past and potential
+                  habitability. <br />
+                  <a href="">read more</a>
+                </p>
+              </div>
+              <div class="numbers">
+                <div class="distance">
+                  <h4>Distance from Earth</h4>
+                  <p class="number">38,000,000 <span class="km">km</span></p>
+                </div>
+                <div class="visits">
+                  <h4>Number of Visits</h4>
+                  <p class="number">1,456</p>
+                </div>
+              </div>
+              <div class="people">
+                <div class="ratings">
+                  <h4>Ratings</h4>
+                  <p>1 2 3 4 5</p>
+                  <p id="rate">4.5</p>
+                </div>
+                <div class="price">
+                  <h4>Price per ticket</h4>
+                  <p class="number amount">$ 1,987,865</p>
+                </div>
+              </div>
+              <div class="button"><button>Buy Ticket Now</button></div>
+            </div>
+          </div>
+          <div class="about-body" id="earth-info">
+            <div class="about-body-images">
+              <img src="Images/earth1.jpg" alt="" width="250px" />
+              <img
+                src="Images/earth2alt.jpg"
+                alt=""
+                width="250px"
+                style="margin-left: 20px"
+              />
+              <img
+                id="last-image"
+                src="Images/earth3.avif"
+                alt=""
+                width="525px"
+                height="300px"
+                style="margin-top: 20px"
+              />
+            </div>
+            <div class="about-body-about">
+              <div class="hero">
+                <p class="hero-header">Earth</p>
+                <p class="hero-body">- The Blue Planet</p>
+              </div>
+              <div class="intro">
+                <p>
+                  Earth is the only known planet to support life. It has a
+                  diverse range of ecosystems, climates, and geological
+                  features, including oceans, mountains, and deserts. It's also
+                  the only planet in our solar system with a protective
+                  atmosphere that shields life from harmful radiation. <br />
+                  <a href="">read more</a>
+                </p>
+              </div>
+              <div class="numbers">
+                <div class="distance">
+                  <h4>Distance from Earth</h4>
+                  <p class="number">-</p>
+                </div>
+                <div class="visits">
+                  <h4>Number of Visits</h4>
+                  <p class="number">1,456</p>
+                </div>
+              </div>
+              <div class="people">
+                <div class="ratings">
+                  <h4>Ratings</h4>
+                  <p>1 2 3 4 5</p>
+                  <p id="rate">4.5</p>
+                </div>
+                <div class="price">
+                  <h4>Price per ticket</h4>
+                  <p class="number amount">$ 1,987,865</p>
+                </div>
+              </div>
+              <div class="button"><button>Buy Ticket Now</button></div>
+            </div>
+          </div>
+          <div class="about-body" id="moon-info">
+            <div class="about-body-images">
+              <img src="Images/moon1.jpg" alt="" width="250px" />
+              <img
+                src="Images/moon2.jpg"
+                alt=""
+                width="250px"
+                style="margin-left: 20px"
+              />
+              <img
+                id="last-image"
+                src="Images/moon3.jpg"
+                alt=""
+                width="525px"
+                height="300px"
+                style="margin-top: 20px"
+              />
+            </div>
+            <div class="about-body-about">
+              <div class="hero">
+                <p class="hero-header">Moon</p>
+                <p class="hero-body"></p>
+              </div>
+              <div class="intro">
+                <p>
+                  The Moon is a natural satellite of Earth and the fifth largest
+                  moon in the solar system. It has a diameter of about
+                  one-quarter that of Earth and is the only celestial object
+                  that humans can see with the naked eye that orbits around our
+                  planet. The Moon's phases, tides, and effects on Earth's
+                  atmosphere and wildlife make it an important object of
+                  scientific study. <br />
+                  <a href="">read more</a>
+                </p>
+              </div>
+              <div class="numbers">
+                <div class="distance">
+                  <h4>Distance from Earth</h4>
+                  <p class="number">384,400 <span class="km">km</span></p>
+                </div>
+                <div class="visits">
+                  <h4>Number of Visits</h4>
+                  <p class="number">1,456</p>
+                </div>
+              </div>
+              <div class="people">
+                <div class="ratings">
+                  <h4>Ratings</h4>
+                  <p>1 2 3 4 5</p>
+                  <p id="rate">4.5</p>
+                </div>
+                <div class="price">
+                  <h4>Price per ticket</h4>
+                  <p class="number amount">$ 1,987,865</p>
+                </div>
+              </div>
+              <div class="button"><button>Buy Ticket Now</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="services">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide service"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="body">
+                <h4>our services</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis et minus dignissimos excepturi vero alias, mollitia
+                  dolorem nulla eum corrupti voluptates, repellat necessitatibus
+                  dicta aspernatur. Eum reprehenderit vel dolore impedit!
+                </p>
+              </div>
+              <div class="card">
+                <h4>Ticket</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+                  nostrum molestiae consequuntur facere optio iusto. Possimus ea
+                  magnam iste quae.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="body">
+                <h4>our mission</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis et minus dignissimos excepturi vero alias, mollitia
+                  dolorem nulla eum corrupti voluptates, repellat necessitatibus
+                  dicta aspernatur. Eum reprehenderit vel dolore impedit!
+                </p>
+              </div>
+              <div class="card">
+                <h4>Flexibility</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+                  nostrum molestiae consequuntur facere optio iusto. Possimus ea
+                  magnam iste quae.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="body">
+                <h4>our vision</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis et minus dignissimos excepturi vero alias, mollitia
+                  dolorem nulla eum corrupti voluptates, repellat necessitatibus
+                  dicta aspernatur. Eum reprehenderit vel dolore impedit!
+                </p>
+              </div>
+              <div class="card">
+                <h4>Value</h4>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+                  nostrum molestiae consequuntur facere optio iusto. Possimus ea
+                  magnam iste quae.
+                </p>
+              </div>
+            </div>
+          </div>
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            >
+              1
+            </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1">
+              2
+            </li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2">
+              3
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <section class="article">
+      <div class="article-header">
+        <button class="active">Article room</button>
+        <!-- <button>Other articles</button> -->
+      </div>
+      <div class="article-body">
+        <div class="card">
+          <img src="Images/card1.jpg" alt="Image 1" />
+          <div class="card-body">
+            <h5>01</h5>
+            <h4>Why life is on Earth</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+              corporis.
+            </p>
+            <a href="">read article</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/card2.jpg" alt="Image 2" />
+          <div class="card-body">
+            <h5>02</h5>
+            <h4>Jupiter, not the god</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde,
+              sunt!
+            </p>
+            <a href="">read article</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="Images/mars2.jpg" alt="Image 3" />
+          <div class="card-body">
+            <h5>03</h5>
+            <h4>Born for the moonlight</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              aperiam?
+            </p>
+            <a href="">read article</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="travellers">
+      <div class="travellers-header"><p>what top travellers say</p></div>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="travellers-body">
+              <div class="one">
+                <div class="image">
+                  <img src="Images/travel1.jpg" alt="" />
+                </div>
+                <div class="bio">
+                  <div class="intro">
+                    <h4>crazy experience</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere, sit!
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="profile-image">
+                      <img src="Images/elon Musk.jpg" alt="" width="100px" />
+                    </div>
+                    <div class="profile-about">
+                      <h4>Elon Musk</h4>
+                      <p>CEO, Space-X</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="two">
+                <div class="image">
+                  <img src="Images/travel2.jpg" alt="" width="300px" />
+                </div>
+                <div class="bio">
+                  <div class="intro">
+                    <h4>awesome world</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere, sit!
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="profile-image">
+                      <img src="Images/jeff.jpg" alt="" width="100px" />
+                    </div>
+                    <div class="profile-about">
+                      <h4>Jeff Bezos</h4>
+                      <p>CEO, Amazon</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="travellers-body">
+              <div class="one">
+                <div class="image">
+                  <img src="Images/travel1.jpg" alt="" width="300px" />
+                </div>
+                <div class="bio">
+                  <div class="intro">
+                    <h4>Lorem, ipsum.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere, sit!
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="profile-image">
+                      <img src="Images/elon Musk.jpg" alt="" width="100px" />
+                    </div>
+                    <div class="profile-about">
+                      <h4>Elon Musk</h4>
+                      <p>CEO, Space-X</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="two">
+                <div class="image">
+                  <img src="Images/travel2.jpg" alt="" width="300px" />
+                </div>
+                <div class="bio">
+                  <div class="intro">
+                    <h4>Lorem, ipsum.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere, sit!
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="profile-image">
+                      <img src="Images/jeff.jpg" alt="" width="100px" />
+                    </div>
+                    <div class="profile-about">
+                      <h4>Lorem, ipsum.</h4>
+                      <p>Lorem, ipsum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="travellers-body">
+              <div class="one">
+                <div class="image">
+                  <img src="Images/travel1.jpg" alt="" width="300px" />
+                </div>
+                <div class="bio">
+                  <div class="intro">
+                    <h4>Lorem, ipsum.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere, sit!
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="profile-image">
+                      <img src="Images/elon Musk.jpg" alt="" width="100px" />
+                    </div>
+                    <div class="profile-about">
+                      <h4>Elon Musk</h4>
+                      <p>CEO, Space-X</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="two">
+                <div class="image">
+                  <img src="Images/travel2.jpg" alt="" width="300px" />
+                </div>
+                <div class="bio">
+                  <div class="intro">
+                    <h4>Lorem, ipsum.</h4>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Facere, sit!
+                    </p>
+                  </div>
+                  <div class="profile">
+                    <div class="profile-image">
+                      <img src="Images/jeff.jpg" alt="" width="100px" />
+                    </div>
+                    <div class="profile-about">
+                      <h4>Lorem, ipsum.</h4>
+                      <p>Lorem, ipsum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          >
+            -
+          </li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1">-</li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2">-</li>
+        </ol>
+      </div>
+    </section>
+    <div class="footer">
+      <div class="footer-nav">
+        <ul class="footer-nav-1">
+          <li>Legal notice</li>
+          <li>Privacy notice</li>
+          <li>Terms and conditions</li>
+        </ul>
+        <ul class="footernav-2">
+          <li>Help center</li>
+          <li>Contact</li>
+          <li>About</li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="index.js"></script>
+  </body>
+</html>

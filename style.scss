@@ -1,0 +1,1566 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(14, 11, 11) !important;
+}
+
+input {
+  border: 0;
+}
+#ticket {
+  width: 400px;
+  height: 350px;
+  margin: auto;
+  margin-top: -50px !important;
+  background-color: gray;
+  background: transparentize($color: gray, $amount: 0.1);
+
+  .ticket-header {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    border-bottom: 1px solid orange;
+    justify-content: space-between;
+    color: white;
+    button {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: black;
+    }
+  }
+  .ticket-body {
+    margin-top: 20px !important;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    p{
+        margin-top: -7px;
+    }
+  }
+  .ticket-end {
+    margin-top: -40px !important;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    p {
+      color: orange;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      button {
+        border: 0;
+        color: white;
+        background-color: black;
+        &:hover {
+          color: black;
+          background-color: orange;
+        }
+      }
+    }
+  }
+}
+#first-reservation{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: #fff;
+    gap: 30px;
+    align-items: center;
+    #content{
+        display: flex;
+        flex-direction: column;
+    }
+    #reservation-removal{
+        height: 100%;
+        
+        button{
+background: red;
+padding: 5px 10px;
+border: 0;
+color: white;
+        }
+    }
+}
+.booking-fields{
+    color: white;
+    margin-top: -30px;
+    margin-right: -3000px;
+    transition: 0.3s;
+    height: 80%;
+    justify-content: center;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 80%;
+}
+.top {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid grey;
+  align-items: center;
+  height: 7vh;
+  .navbar {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    a {
+      text-decoration: none !important;
+      color: #fff !important;
+    }
+    ul {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      .active {
+        color: orange !important;
+      }
+
+      li {
+        list-style: none;
+        color: #fff;
+        align-items: center;
+        text-align: center;
+        a {
+          &:hover {
+            color: orange !important;
+          }
+        }
+      }
+    }
+  }
+}
+.banner {
+  height: 110vh;
+  background-color: black;
+  background-image: url(Images/newbackalt2.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  .mobile-navbar {
+    display: none;
+  }
+  .mid-button {
+    display: none;
+  }
+  .intro {
+    width: 60%;
+    margin-left: 50%;
+    margin-top: 10%;
+    color: white;
+    &-header {
+      width: 60%;
+      text-transform: capitalize;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 4vw;
+    }
+    &-body {
+      width: 70%;
+      font-family: monospace;
+      font-size: 25px;
+    }
+  }
+
+  .ticket {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 150px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    border-radius: 10px;
+    i {
+      color: white;
+      font-size: 20px !important;
+    }
+    span {
+      display: none;
+    }
+    form {
+      display: flex;
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: inherit;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+      filter: blur(10px);
+      margin: -20px;
+    }
+    &-buttons {
+      display: flex;
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 1px solid grey;
+
+      button {
+        border: 0;
+        background: 0;
+        color: white;
+        &:hover {
+          color: orange;
+        }
+        &:first-child {
+          margin-left: 48px;
+        }
+      }
+    }
+    &-fields {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+      padding-top: 25px;
+      align-items: center;
+      transition: 0.4s;
+      form {
+        width: 100%;
+        margin: auto;
+      }
+      .field {
+        justify-content: center;
+      }
+      select,
+      #datepicker {
+        height: 40px;
+        width: 100px;
+        border-radius: 10px;
+        padding-left: 5px;
+        color: grey;
+      }
+
+      &-button {
+        button {
+          height: 40px;
+          width: 100px;
+          border-radius: 10px;
+          background-color: orange;
+          border: 0;
+          color: white;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+          font-size: 1vw;
+          text-align: center;
+          justify-content: center;
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  .closure {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-bottom: 5vh;
+    .link {
+      color: orange;
+      margin-left: 10px;
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
+    }
+    p {
+      color: white;
+    }
+  }
+}
+.about-section {
+    height: auto;
+}
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  margin-top: 15vh !important;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  &-intro {
+    display: flex;
+    color: white;
+    .header {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 2vw;
+      width: 50%;
+      font-weight: 500;
+    }
+    .body {
+      width: 50%;
+      font-family: sans-serif;
+      font-size: 1.2vw;
+    }
+  }
+  &-buttons {
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    margin-top: 10vh;
+    .active {
+      color: orange;
+    }
+    button {
+      border: 0;
+      background: 0;
+      color: white;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+  &-body {
+    display: flex;
+    &-images {
+      width: 70% !important;
+      display: flexbox;
+      flex-wrap: wrap;
+      justify-content: space-between !important;
+      margin-top: 40px;
+      img {
+        border-radius: 10px;
+      }
+    }
+    &-about {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      margin-left: 40px;
+      margin-top: 20px;
+      width: 50%;
+      a {
+        display: none;
+      }
+      .distance,
+      .ratings {
+        width: 60%;
+      }
+      button {
+        border: 0;
+        padding: 13px 20px;
+        background-color: orange;
+        border-radius: 10px;
+        color: white;
+      }
+
+      .intro {
+        p {
+          font-size: 1.2vw;
+          font-family: sans-serif;
+          font-weight: 100;
+        }
+      }
+      .number {
+        font-size: 1.5vw;
+        font-weight: 700;
+        // margin-top: -20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+      .km {
+        font-size: 20px;
+        font-weight: 100 !important;
+        font-family: monospace;
+      }
+      // .unit{
+      //     color: white !important;
+      // }
+      .amount {
+        color: orange;
+        font-size: 2vw;
+      }
+      .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        text-align: left;
+        &-header {
+          font-weight: bold;
+          font-size: 2vw;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+        }
+        &-body {
+          margin-left: 10px;
+          font-size: 1.2vw;
+        }
+      }
+      .numbers {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        margin-top: 40px;
+        h4 {
+          font-size: 1.2vw;
+          font-weight: 100;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+        }
+      }
+      #rate {
+        font-weight: 800;
+        font-size: 1.2vw;
+      }
+      .people {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: left !important;
+        h4 {
+          font-size: 1.2vw;
+          font-weight: 100;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+        }
+      }
+    }
+  }
+}
+// .signup-form{
+//     background-color: white;
+// }
+.services-section {
+  background-image: url(Images/serviceback.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.services {
+  height: 100vh;
+  width: 80%;
+  margin-top: 6vh !important;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+  .carousel-indicators {
+    display: flex;
+    gap: 15px;
+    .active {
+      background-color: orange;
+    }
+    li {
+      list-style: none !important;
+      padding: 5px 10px;
+      border: 1px solid grey;
+      border-radius: 50%;
+      font-size: 10px;
+    }
+  }
+  .carousel {
+    margin-top: 25vh !important;
+    height: 60%;
+  }
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+    .body {
+      width: 50%;
+    }
+    .card {
+      margin-left: 50px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      align-items: left;
+      // margin: auto;
+      height: 150px;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      position: relative;
+      z-index: 1;
+      background: inherit;
+      overflow: hidden;
+      border-radius: 10px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+        filter: blur(10px);
+        margin: -20px;
+      }
+      h4 {
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        border-bottom: 1px solid orange;
+        color: orange;
+      }
+      p {
+        padding-left: 20px;
+        color: white;
+      }
+    }
+  }
+}
+.article {
+  height: auto;
+margin-top: 5vh !important;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  &-header {
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    button {
+      color: white;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 30px;
+
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+  &-body {
+    padding-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    gap: 10px;
+    .card {
+      width: 300px;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      background-color: rgb(44, 43, 43);
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+        rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+        rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+        rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+        rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      a {
+        display: none;
+      }
+      &:hover {
+        transform: scale(1.05);
+        z-index: 1;
+      }
+      img {
+        margin-top: 30px;
+        width: 240px;
+        display: flex;
+        justify-content: center;
+      }
+      &-body {
+        text-align: left;
+        h5 {
+          color: orange;
+        }
+      }
+    }
+  }
+}
+.travellers {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 80%;
+  margin: auto;
+  color: white;
+  margin-top: 15vh;
+  .carousel {
+    margin-top: 5vh !important;
+    height: 60%;
+  }
+  .carousel-indicators {
+    display: flex;
+    gap: 10px;
+    .active {
+      color: orange;
+    }
+    li {
+      list-style: none !important;
+      font-size: 30px;
+      color: white;
+    }
+  }
+  &-header {
+    display: flex;
+    p {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 30px;
+    }
+  }
+  .travellers-body {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+
+    .one,
+    .two {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      .image {
+        img {
+          width: 150px;
+          height: 180px;
+          border-radius: 10px;
+        }
+      }
+      .bio {
+        display: flex;
+        flex-direction: column;
+        .profile {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          &-image {
+            img {
+              border-radius: 50%;
+              height: 80px;
+              width: 70px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.footer {
+  position: absolute;
+  height: 5vh;
+  display: flex;
+  width: 100%;
+  border-top: 1px solid grey;
+  padding-top: 20px;
+  color: white;
+  &-nav {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      gap: 25px;
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(14, 11, 11) !important;
+    width: 100%;
+  }
+  .top {
+    border-bottom: 0;
+    position: fixed;
+    .mobile {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      padding-right: 20px;
+      padding-top: 20px;
+      i {
+        color: grey;
+        font-size: 7vw;
+      }
+    }
+    .mobile-navbar {
+      gap: 10px;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+      position: fixed;
+      height: 100vh;
+      width: 300px;
+      right: -320px;
+      top: 0;
+      margin-left: 50%;
+      background-color: rgb(51, 51, 51);
+      // background: opacify($color: , $amount: 0);
+      align-items: start;
+      color: black !important;
+      transition: 0.3s !important;
+      .cancel {
+        padding-top: 0;
+        display: flex;
+        color: white;
+        padding-bottom: 20px;
+        i {
+          font-size: 7vw;
+        }
+      }
+      li {
+        padding-top: 20px;
+        list-style: none;
+        color: white;
+        align-items: center;
+        text-align: center;
+        .active {
+          color: orange;
+        }
+        #login {
+          border: 1px solid orange;
+          padding: 10px 25px;
+          border-radius: 20px;
+          &:hover {
+            background-color: orange !important;
+            color: white !important;
+          }
+        }
+        #signup {
+          border: 1px solid orange;
+          background-color: orange;
+          padding: 10px 25px;
+          border-radius: 20px;
+          &:hover {
+            background: transparent;
+            color: white !important;
+          }
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: orange !important;
+          }
+        }
+      }
+    }
+    .navbar {
+      display: none;
+    }
+  }
+  #first-reservation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+.booking-fields{
+    margin-top: -50%;
+    margin-right: -3000px;
+    transition: 0.3s;
+    height: 80%;
+    justify-content: space-between;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+  .banner {
+    height: 100vh;
+    width: 100% !important;
+    // background: black !important;
+    // border-bottom-right-radius: 50% 30% ;
+    // border-bottom: 2px solid grey;
+    // border-top: 2px solid grey;
+    // background-color: black;
+    background-image: url(Images/newbackalt2.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    .mid-button {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 70%;
+      button {
+        background-color: white;
+        color: black;
+        border: 0;
+        padding: 10px 30px;
+        border-radius: 20px;
+        font-size: 5vw;
+        font-family: monospace;
+      }
+    }
+
+    .intro {
+      width: 80%;
+      margin: auto !important;
+      margin-left: 0;
+      margin-top: 30% !important;
+      color: white;
+      &-header {
+        text-align: center;
+        width: 100%;
+        text-transform: capitalize;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 8vw;
+        font-weight: 700;
+      }
+      &-body {
+        width: 100%;
+        font-family: sans-serif;
+        font-size: 5vw;
+        color: grey;
+        text-align: center;
+      }
+    }
+
+    .ticket {
+      display: none !important;
+    }
+
+    .mobile-ticket {
+      width: 80%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      height: 300px;
+      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      position: relative;
+      z-index: 0;
+      background: inherit;
+      overflow: hidden;
+      border-radius: 10px;
+      label {
+        display: flex;
+        margin: 0 !important;
+        gap: 3px;
+        margin-bottom: 3px !important;
+      }
+      i {
+        color: white;
+        font-size: 20px !important;
+      }
+      span {
+        display: flex;
+        color: white;
+      }
+      form {
+        display: grid !important;
+        column-count: 2 !important;
+        row-gap: 10px;
+        column-gap: 40px !important;
+        grid-template-columns: auto auto;
+
+        justify-content: right !important;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+        filter: blur(10px);
+      }
+      &-buttons {
+        display: flex;
+        width: 100%;
+        padding-bottom: 5px;
+        padding-top: 25px;
+        border-bottom: 1px solid grey;
+        justify-content: center;
+        align-items: center;
+
+        button {
+          border: 0;
+          background: 0;
+          color: white;
+          &:hover {
+            color: orange;
+          }
+          &:first-child {
+            margin-left: 0 ;
+          }
+        }
+      }
+      &-fields {
+        display: grid !important;
+        column-count: 2 !important;
+        row-gap: 30px;
+        width: 100%;
+
+        justify-content: space-evenly !important;
+        padding-top: 25px;
+        //  align-items: center;
+        //  gap: 30px !important;
+        form {
+          width: 100%;
+          margin: auto;
+        }
+        .field {
+          width: 90%;
+          margin: auto;
+          align-items: center;
+        }
+        select,
+        #datepicker {
+          height: 30px;
+          width: 100px;
+          border-radius: 10px;
+          padding-left: 5px;
+          color: grey;
+          // margin-top: 10px;
+        }
+
+        &-button {
+          margin-top: 25px;
+          margin-left: 8px;
+          button {
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+            background-color: orange;
+            border: 0;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+              "Helvetica Neue", sans-serif;
+            font-size: 4vw;
+            text-align: center;
+            justify-content: center;
+            &:hover {
+              background-color: white;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    .closure {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      margin-bottom: 0;
+      margin-top: 7vh !important;
+      position: relative;
+      .link {
+        color: orange;
+        margin-left: 10px;
+        cursor: pointer;
+        &:hover {
+          color: white;
+        }
+      }
+      p {
+        font-size: 4vw;
+        color: white;
+      }
+    }
+  }
+  #ticket {
+    width: 80%;
+    height: 450px;
+
+    margin-top: 0;
+    background-color: gray;
+    background: transparentize($color: gray, $amount: 0.2);
+
+    .ticket-header {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      border-bottom: 1px solid orange;
+      justify-content: space-between;
+      color: white;
+      button {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        color: black;
+      }
+    }
+    .ticket-body {
+      margin-top: 20px !important;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+    .ticket-end {
+      margin-top: -30px !important;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      p {
+        color: orange;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        button {
+          padding: 5px 10px;
+          color: white;
+          background-color: black;
+          &:hover {
+            color: black;
+            background-color: orange;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    margin-top: 7vh !important;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+
+    &-intro {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      .header {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 8vw;
+        width: 100%;
+        font-weight: 700;
+        text-align: center;
+      }
+      .body {
+        width: 100%;
+        font-family: sans-serif;
+        font-size: 5vw;
+        text-align: center;
+      }
+    }
+    &-buttons {
+      border-bottom: 1px solid grey;
+      padding-bottom: 10px;
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .active {
+        color: orange;
+      }
+      button {
+        border: 0;
+        background: 0;
+        color: white;
+        font-size: 5vw;
+        font-weight: 700;
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &-images {
+        width: 100% !important;
+        display: flexbox;
+        flex-wrap: wrap;
+        justify-content: space-between !important;
+        margin-top: 10px;
+        #last-image {
+          width: 300px;
+          height: 150px;
+        }
+        img {
+          border-radius: 10px;
+          width: 120px;
+          height: 110px;
+          margin-top: 10px !important;
+          margin-left: 0 !important;
+        }
+      }
+      &-about {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        a {
+          display: flex;
+          color: orange;
+          text-decoration: none;
+        }
+        .distance,
+        .ratings {
+          width: 60%;
+        }
+        button {
+          border: 0;
+          font-size: 4vw;
+          padding: 5px 10px;
+          background-color: orange;
+          border-radius: 10px;
+          color: white;
+          margin-left: 55%;
+        }
+
+        .intro {
+          margin-top: -10px;
+
+          p {
+            font-size: 5vw;
+            font-family: sans-serif;
+            font-weight: 100;
+          }
+        }
+        .number {
+          display: none;
+          font-size: 1.5vw;
+          font-weight: 700;
+          // margin-top: -20px;
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+            Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+            sans-serif;
+        }
+        .km {
+          font-size: 20px;
+          font-weight: 100 !important;
+          font-family: monospace;
+        }
+        // .unit{
+        //     color: white !important;
+        // }
+        .amount {
+          color: orange;
+          font-size: 2vw;
+        }
+        .hero {
+          margin-top: -10px;
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+          text-align: left;
+          &-header {
+            font-weight: bold;
+            font-size: 6vw;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+              "Helvetica Neue", sans-serif;
+          }
+          &-body {
+            margin-left: 2px;
+            font-size: 4vw;
+            font-weight: 500;
+          }
+        }
+        .numbers {
+          display: none !important;
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          align-items: center;
+          margin-top: 40px;
+          h4 {
+            font-size: 1.2vw;
+            font-weight: 100;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+              "Helvetica Neue", sans-serif;
+          }
+        }
+        #rate {
+          font-weight: 800;
+          font-size: 1.2vw;
+        }
+        .people {
+          display: none !important;
+          display: flex;
+          width: 100%;
+          align-items: center;
+          text-align: left !important;
+          h4 {
+            font-size: 1.2vw;
+            font-weight: 100;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+              "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+              "Helvetica Neue", sans-serif;
+          }
+        }
+      }
+    }
+  }
+  .services-section {
+    background-image: url(Images/serviceback.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background: 0;
+    margin-top: 5vh !important;
+    height: auto;
+  }
+  .services {
+    margin-top: 0 !important;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+    .carousel-indicators {
+      display: flex;
+      gap: 5px !important;
+      .active {
+        background-color: orange;
+      }
+      li {
+        list-style: none !important;
+        padding: 2.5px 5px;
+        border: 1px solid grey;
+        border-radius: 50%;
+        font-size: 5px;
+      }
+    }
+    .carousel {
+      padding-top: 100px !important;
+      margin-top: 0 !important;
+      height: 90%;
+    }
+    .carousel-item {
+      width: 100%;
+      height: 70%;
+      .body {
+        width: 100%;
+        h4 {
+          font-size: 8vw;
+          font-weight: 700;
+          text-align: center;
+        }
+        p {
+          width: 100%;
+          text-align: left;
+          font-size: 5vw;
+          text-align: center;
+        }
+      }
+      .card {
+        margin-left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: left;
+        // margin: auto;
+        height: auto;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+        border-radius: 10px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          background: inherit;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+          filter: blur(10px);
+          margin: -20px;
+        }
+        h4 {
+          margin-left: 10px;
+          margin-right: 20px;
+          padding-bottom: 5px;
+          padding-top: 10px;
+          border-bottom: 1px solid orange;
+          font-size: 6vw;
+          color: white;
+        }
+        p {
+          // margin-top: -20px;
+          padding-left: 10px;
+          padding-right: 10px;
+          font-size: 5vw;
+          color: white;
+        }
+      }
+    }
+  }
+  .article {
+    height: auto;
+    margin-top: 15vh !important;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    &-header {
+      width: 100%;
+      display: flex;
+      color: white;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid gray;
+
+      button {
+        color: white;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 8vw;
+        font-weight: 700;
+
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+    &-body {
+      padding-top: 5vh;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: auto !important;
+      justify-content: center;
+      height: auto !important;
+      gap: 3vh;
+      .card {
+        width: 100% !important;
+        height: 500px;
+        margin: auto !important;
+        position: relative;
+        transition: all 0.3s ease-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: rgb(44, 43, 43);
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+          rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+          rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+          rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+          rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+          rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        &:hover {
+          transform: scale(1.05);
+          z-index: 1;
+        }
+        img {
+          width: 80%;
+          display: flex;
+          justify-content: center;
+        }
+        &-body {
+          text-align: left;
+          h5 {
+            color: orange;
+          }
+          a {
+            color: orange !important;
+            text-decoration: none;
+            display: flex;
+          }
+          p {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .travellers {
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 80%;
+    margin: auto;
+    color: white;
+    margin-top: 15vh !important;
+ 
+    .carousel {
+      margin-top: 0 !important;
+      height: auto !important;
+      padding-bottom: 100px !important;
+
+    }
+    .carousel-indicators {
+      position: absolute;
+      display: flex;
+      gap: 10px;
+      .active {
+        color: orange;
+      }
+      li {
+        list-style: none !important;
+        font-size: 30px;
+        color: white;
+      }
+    }
+    &-header {
+      display: flex;
+      p {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 8vw;
+        font-weight: 700;
+      }
+    }
+    .travellers-body {
+      margin-top: 5vh;
+      display: flex;
+      flex-direction: row;
+      flex-direction: column !important;
+      gap: 40px;
+
+      .one,
+      .two {
+        display: flex;
+
+        gap: 20px;
+        .image {
+          display: none !important;
+          img {
+            width: 150px;
+            height: 180px;
+            border-radius: 10px;
+          }
+        }
+        .bio {
+          display: flex;
+          flex-direction: column;
+          .profile {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            &-image {
+              img {
+                border-radius: 50%;
+                height: 80px;
+                width: 70px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    position: absolute;
+    height: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border-top: 1px solid grey;
+    padding-top: 20px;
+    color: white;
+    justify-content: center;
+    &-nav {
+      width: 80%;
+      margin: auto !important;
+      display: flexbox;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        li {
+          list-style: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
