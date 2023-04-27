@@ -143,6 +143,7 @@ cancelBar.addEventListener("click", (e) => {
   navbar.style.marginRight = "-300px";
 });
 
+
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -170,3 +171,6 @@ AOS.init({
   once: true,
   disable: "mobile",
 });
+
+
+//  document.querySelector(".about-body-images").style.marginleft = "-20000px";

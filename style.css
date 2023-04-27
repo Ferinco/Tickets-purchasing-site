@@ -213,7 +213,8 @@ input {
 }
 
 .banner {
-  height: 110vh;
+  height: auto !important;
+  gap: 50px !important;
   background-color: black;
   background-image: url(Images/newbackalt2.jpg);
   background-repeat: no-repeat;
@@ -428,7 +429,7 @@ input {
 }
 
 .about-section {
-  height: auto;
+  height: auto !important;
 }
 
 .about {
@@ -638,9 +639,9 @@ input {
 }
 
 .services {
-  height: 100vh;
+  height: auto;
   width: 80%;
-  margin-top: 6vh !important;
+  margin-top: 0 !important;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -672,7 +673,9 @@ input {
 }
 
 .services .carousel {
-  margin-top: 25vh !important;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 0 !important;
   height: 60%;
 }
 
@@ -995,6 +998,78 @@ input {
 
 .footer-nav ul li {
   list-style: none;
+}
+
+.signup-page {
+  background-color: white !important;
+}
+
+.signup-page .signup-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.signup-page .signup-form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-page .form-field {
+  margin-bottom: 20px;
+}
+
+.signup-page .form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.signup-page .form-field input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-page .form-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.signup-page .form-actions a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.signup-page .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #2196f3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-page .btn:hover {
+  background-color: #0c7cd5;
 }
 
 @media screen and (min-width: 300px) and (max-width: 800px) {
