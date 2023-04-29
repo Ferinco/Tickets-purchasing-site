@@ -19,9 +19,82 @@
       crossorigin="anonymous"
     />
 </head>
-<body>
-    <container class="login-form">
-        
-    </container>
+<body id="login-page">
+  <div class="top">
+    <div class="navbar" id="navbar">
+      <ul class="navbar-one">
+        <li><a class="active nav-link" href="home.html">Home</a></li>
+        <li><a class="nav-link" href="">Popular</a></li>
+        <li><a href="">Contact Us</a></li>
+        <li><a class="nav-link" href="">FAQs</a></li>
+      </ul>
+      <ul class="navbar-two">
+        <li><a href="signup.html">sign up</a></li>
+      </ul>
+    </div>
+    <ul class="mobile-navbar" id="mobile-navbar">
+      <div class="cancel">
+        <i class="fa fa-times" id="mobile-cancel"></i>
+      </div>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="">Popular</a></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href="">FAQs</a></li>
+      <li><a href="signup.html" id="signup">sign up</a></li>
+    </ul>
+    <div class="mobile">
+      <i class="fa fa-bars" id="mobile"></i>
+    </div>
+  </div>
+  <div class="container">
+    <form
+      class="login-form"
+      action="/.netlify/functions/login"
+      method="POST"
+    >
+  <div class="form-header">
+      <h2>welcome back, traveller <i class="fa fa-rocket"></i></h2>
+      <span>don't have an account yet?<a href="signup.html">Sign up</a></span>
+  </div>
+      <div class="form-field">
+        <label for="email">email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="password">password</label>
+<div class="passfield">
+  <input
+  type="password"
+  id="password"
+  name="password"
+  required
+/>
+<i class="fa fa-eye" style="color: white;" onclick="togglePassword()"></i>
+</div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn" type="submit">Log in</button>
+      </div>
+    </form>
+  </div>
+    <script src="nav.js"></script>
+<script>
+  function togglePassword() {
+  password = document.getElementById("password");
+  if (password.type === "password") {
+    password.type = "text";
+  }
+  else {
+    password.type = "password";
+  }
+}
+</script>
 </body>
 </html>

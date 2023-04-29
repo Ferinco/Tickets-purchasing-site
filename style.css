@@ -164,6 +164,7 @@ input {
       -ms-flex-align: center;
           align-items: center;
   height: 7vh;
+  margin: 0 !important;
 }
 
 .top .navbar {
@@ -238,26 +239,35 @@ input {
 }
 
 .banner .intro {
-  width: 60%;
-  margin-left: 50%;
-  margin-top: 10%;
+  width: 80%;
+  margin: auto !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 15% !important;
   color: white;
 }
 
 .banner .intro-header {
-  width: 60%;
+  width: 100%;
   text-transform: capitalize;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 4vw;
 }
 
 .banner .intro-body {
-  width: 70%;
+  margin: auto;
+  width: 80%;
   font-family: monospace;
   font-size: 25px;
 }
 
 .banner .ticket {
+  margin-top: 50px !important;
+}
+
+.banner .ticket, .banner .mobile-ticket {
   width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,16 +294,16 @@ input {
   border-radius: 10px;
 }
 
-.banner .ticket i {
+.banner .ticket i, .banner .mobile-ticket i {
   color: white;
   font-size: 20px !important;
 }
 
-.banner .ticket span {
+.banner .ticket span, .banner .mobile-ticket span {
   display: none;
 }
 
-.banner .ticket form {
+.banner .ticket form, .banner .mobile-ticket form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,7 +314,7 @@ input {
           justify-content: space-between;
 }
 
-.banner .ticket:before {
+.banner .ticket:before, .banner .mobile-ticket:before {
   content: "";
   position: absolute;
   background: inherit;
@@ -320,7 +330,7 @@ input {
   margin: -20px;
 }
 
-.banner .ticket-buttons {
+.banner .ticket-buttons, .banner .mobile-ticket-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,21 +339,21 @@ input {
   border-bottom: 1px solid grey;
 }
 
-.banner .ticket-buttons button {
+.banner .ticket-buttons button, .banner .mobile-ticket-buttons button {
   border: 0;
   background: 0;
   color: white;
 }
 
-.banner .ticket-buttons button:hover {
+.banner .ticket-buttons button:hover, .banner .mobile-ticket-buttons button:hover {
   color: orange;
 }
 
-.banner .ticket-buttons button:first-child {
+.banner .ticket-buttons button:first-child, .banner .mobile-ticket-buttons button:first-child {
   margin-left: 48px;
 }
 
-.banner .ticket-fields {
+.banner .ticket-fields, .banner .mobile-ticket-fields {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,19 +369,20 @@ input {
   transition: 0.4s;
 }
 
-.banner .ticket-fields form {
+.banner .ticket-fields form, .banner .mobile-ticket-fields form {
   width: 100%;
   margin: auto;
 }
 
-.banner .ticket-fields .field {
+.banner .ticket-fields .field, .banner .mobile-ticket-fields .field {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .banner .ticket-fields select,
-.banner .ticket-fields #datepicker {
+.banner .ticket-fields #datepicker, .banner .mobile-ticket-fields select,
+.banner .mobile-ticket-fields #datepicker {
   height: 40px;
   width: 100px;
   border-radius: 10px;
@@ -379,7 +390,7 @@ input {
   color: grey;
 }
 
-.banner .ticket-fields-button button {
+.banner .ticket-fields-button button, .banner .mobile-ticket-fields-button button {
   height: 40px;
   width: 100px;
   border-radius: 10px;
@@ -394,7 +405,7 @@ input {
           justify-content: center;
 }
 
-.banner .ticket-fields-button button:hover {
+.banner .ticket-fields-button button:hover, .banner .mobile-ticket-fields-button button:hover {
   background-color: white;
   color: black;
 }
@@ -1000,76 +1011,249 @@ input {
   list-style: none;
 }
 
-.signup-page {
-  background-color: white !important;
-}
-
-.signup-page .signup-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-}
-
-.signup-page .signup-form h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.signup-page .form-field {
-  margin-bottom: 20px;
-}
-
-.signup-page .form-field label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.signup-page .form-field input {
-  display: block;
+#login-page {
+  height: 100vh;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #1d1d1d !important;
 }
 
-.signup-page .form-actions {
+#login-page .mobile-navbar {
+  display: none;
+}
+
+#login-page .top {
+  position: relative;
+}
+
+#login-page .top .navbar {
+  width: 74%;
+}
+
+#login-page .container {
+  min-width: 300px;
+  height: 100%;
+  max-width: 500px;
+  margin-left: 10%;
+}
+
+#login-page .container .login-form {
+  margin: 10%;
+  margin-top: 30%;
+}
+
+#login-page .container .login-form .form-header {
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
 }
 
-.signup-page .form-actions a {
-  color: #2196f3;
-  text-decoration: none;
+#login-page .container .login-form .form-header h2 {
+  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 22px;
+  color: white;
 }
 
-.signup-page .btn {
+#login-page .container .login-form .form-header span {
+  color: #afafaf;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#login-page .container .login-form .form-header span a {
+  color: orange;
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+#login-page .container .login-form .passfield {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#login-page .container .login-form .passfield i {
+  margin-top: -5px;
+  margin-left: 30px !important;
+}
+
+#login-page .container .login-form .form-field {
+  margin: 20px 0;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #272626 !important;
+  max-width: 300px;
+  min-width: 300px;
+  background: rgba(15, 14, 14, 0.8);
+  border: 3px solid white;
+}
+
+#login-page .container .login-form .form-field:hover {
+  border: 4px solid orange;
+}
+
+#login-page .container .login-form .form-field label {
+  color: #aaaaaa;
+  font-size: 15px;
+}
+
+#login-page .container .login-form .form-field input {
+  background: transparent;
+  outline: 0;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#login-page .container .login-form .form-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+#login-page .container .login-form .form-actions button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  border-radius: 30px;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   color: #fff;
-  background-color: #2196f3;
+  background-color: orange;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.signup-page .btn:hover {
-  background-color: #0c7cd5;
+#login-page .container .login-form .form-actions button:hover {
+  border: 4px solid white;
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  #login-page .login-form {
+    margin-left: 0 !important;
+  }
+  #login-page .top {
+    border-bottom: 0;
+    position: relative;
+    margin: 0 !important;
+    padding-top: 0 !important;
+  }
+  #login-page .top .mobile {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding-right: 20px;
+    padding-top: 2px;
+  }
+  #login-page .top .mobile i {
+    color: grey;
+    font-size: 7vw;
+  }
+  #login-page .top .navbar {
+    display: none !important;
+  }
+  #login-page .mobile-navbar {
+    height: 100%;
+    gap: 10px;
+    padding-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    position: fixed;
+    height: 100vh;
+    width: 300px;
+    right: -2000px;
+    top: 0;
+    margin-left: 50%;
+    background-color: #333333;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    color: black !important;
+    -webkit-transition: 0.3s !important;
+    transition: 0.3s !important;
+  }
+  #login-page .mobile-navbar .cancel {
+    padding-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: white;
+    padding-bottom: 20px;
+  }
+  #login-page .mobile-navbar .cancel i {
+    font-size: 7vw;
+  }
+  #login-page .mobile-navbar li {
+    padding-top: 20px;
+    list-style: none;
+    color: white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #login-page .mobile-navbar li .active {
+    color: orange;
+  }
+  #login-page .mobile-navbar li #login {
+    border: 1px solid orange;
+    padding: 10px 25px;
+    border-radius: 20px;
+  }
+  #login-page .mobile-navbar li #login:hover {
+    background-color: orange !important;
+    color: white !important;
+  }
+  #login-page .mobile-navbar li #signup {
+    border: 1px solid orange;
+    background-color: orange;
+    padding: 10px 25px;
+    border-radius: 20px;
+  }
+  #login-page .mobile-navbar li #signup:hover {
+    background: transparent;
+    color: white !important;
+  }
+  #login-page .mobile-navbar li a {
+    color: white;
+    text-decoration: none;
+  }
+  #login-page .mobile-navbar li a:hover {
+    color: orange !important;
+  }
 }
 
 @media screen and (min-width: 300px) and (max-width: 800px) {
@@ -1213,7 +1397,8 @@ input {
     width: 100%;
   }
   .banner {
-    height: 100vh;
+    gap: 0 !important;
+    height: 100vh !important;
     width: 100% !important;
     background-image: url(Images/newbackalt2.jpg);
     background-repeat: no-repeat;
@@ -1288,7 +1473,7 @@ input {
         -ms-flex-align: center;
             align-items: center;
     margin: auto;
-    height: 300px;
+    height: 300px  !important;
     -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;

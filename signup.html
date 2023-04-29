@@ -5,60 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="signup.css">
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css" />
   </head>
   <body class="signup-page">
-    <section>
+    <div class="top">
+        <div class="navbar" id="navbar">
+          <ul class="navbar-one">
+            <li><a class="active nav-link" href="home.html">Home</a></li>
+            <li><a class="nav-link" href="">Popular</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a class="nav-link" href="">FAQs</a></li>
+          </ul>
+          <ul class="navbar-two">
+            <li><a href="login.html">log in</a></li>
+          </ul>
+        </div>
+        <ul class="mobile-navbar" id="mobile-navbar">
+          <div class="cancel">
+            <i class="fa fa-times" id="mobile-cancel"></i>
+          </div>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="">Popular</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">FAQs</a></li>
+          <li><a href="login.html" id="login">log in</a></li>
+        </ul>
+        <div class="mobile">
+          <i class="fa fa-bars" id="mobile"></i>
+        </div>
+      </div>
+    <div>
       <form
         class="signup-form"
         action="/.netlify/functions/signup"
         method="POST"
       >
-        <h2>Create an account</h2>
+    <div class="form-header">
+        <p>JOIN OUTATHEWORLD...</p>
+        <h2>Create an account <i class="fas fa-user-astronaut"></i></h2>
+        <span>Already have an account? <a href="#">Log in</a></span>
+    </div>
+<div class="name-fields">
+    <div class="name-field">
+      <label for="first-name">first name</label>
+      <input
+        type="text"
+        id="first-name"
+        name="first-name"
+        required
+      />
+    </div>
+    <div class="name-field">
+        <label for="last-name">last name</label>
+        <input
+          type="text"
+          id="last-ame"
+          name="last-name"
+          required
+        />
+      </div>
+</div>
+
+
 
         <div class="form-field">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-
-        <div class="form-field">
-          <label for="email">Email</label>
+          <label for="email">email</label>
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="Enter your email"
             required
           />
         </div>
 
         <div class="form-field">
-          <label for="password">Password</label>
-          <input
+          <label for="password">password</label>
+          <div class="passfield">
+            <input
             type="password"
             id="password"
             name="password"
-            placeholder="Enter a password"
             required
           />
+          <i class="fa fa-eye" style="color: white;" onclick="togglePassword()"></i>
+          </div>
         </div>
         <div data-netlify-recaptcha="true"></div>
-        <div class="form-field">
-          <input type="file" name="yfle" placeholder="upload file" />
-        </div>
-
         <div class="form-actions">
           <button class="btn" type="submit">Sign Up</button>
-          <span>Already have an account? <a href="#">Log in</a></span>
         </div>
       </form>
-    </section>
+    </div>
+    <script src="nav.js "></script>
+    <!-- <script src="/functions/signup.js"></script> -->
+    <script>
+        function togglePassword() {
+  password = document.getElementById("password");
+  if (password.type === "password") {
+    password.type = "text";
+  }
+  else {
+    password.type = "password";
+  }
+}
+    </script>
   </body>
 </html>

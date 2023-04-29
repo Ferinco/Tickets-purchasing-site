@@ -1,0 +1,384 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1d1d1d;
+}
+
+body .mobile-navbar {
+  display: none;
+}
+
+body input {
+  border: 0;
+}
+
+body .signup-form {
+  max-width: 700px;
+  padding: 20px;
+  min-width: 300px;
+  border-radius: 5px;
+  margin: 10%;
+  margin-top: 5% !important;
+  padding-right: 40px;
+}
+
+body .signup-form .name-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  max-width: 500px;
+  min-width: 300px;
+  gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  body .signup-form .name-fields {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
+    gap: 20px !important;
+  }
+}
+
+body .signup-form .name-field {
+  border-radius: 20px !important;
+  margin-bottom: 0;
+  border: 1px solid white;
+  width: 240px !important;
+  padding: 5px 10px;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #272626 !important;
+  background: rgba(15, 14, 14, 0.8);
+}
+
+body .signup-form .name-field:hover {
+  border: 4px solid orange;
+}
+
+body .form-header {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+body .form-header p {
+  font-size: 15px;
+  color: grey;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body .form-header h2 {
+  margin-top: -10px;
+  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+body .form-header h2 span {
+  color: orange;
+  font-size: 30px;
+}
+
+body .form-header span {
+  margin-top: -15px;
+  color: #afafaf;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body .form-header span a {
+  color: orange;
+}
+
+body .form-field {
+  margin: 20px 0;
+  padding: 5px 10px;
+  border: solid 1px white;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #272626 !important;
+  max-width: 485px;
+  min-width: 300px;
+  background: rgba(15, 14, 14, 0.8);
+}
+
+body .form-field:hover {
+  border: 4px solid orange;
+}
+
+body .form-field label,
+body .name-field label {
+  padding: 5px;
+  color: #aaaaaa;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body .form-field input,
+body .name-field input {
+  outline: none;
+  background-color: #272626 !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0 15px;
+  border-radius: 40px;
+  color: white;
+  font-size: 15px;
+  background: transparent;
+  padding-bottom: 5px;
+}
+
+body .passfield {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .passfield i {
+  margin-top: -10px;
+  margin-left: 50%;
+}
+
+body .form-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+body .form-actions button {
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: orange;
+  border: none;
+  cursor: pointer;
+}
+
+body .form-actions button:hover {
+  border: 4px solid white;
+}
+
+.top {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid grey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7vh;
+  margin: 0 !important;
+}
+
+.top .navbar {
+  width: 74%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .navbar a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.top .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top .navbar ul .active {
+  color: orange !important;
+}
+
+.top .navbar ul li {
+  list-style: none;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.top .navbar ul li a:hover {
+  color: orange !important;
+}
+
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  .signup-form {
+    margin-left: 0 !important;
+  }
+  .form-header h2 {
+    margin-top: -10px;
+    font-weight: 600 !important;
+    font-family: sans-serif;
+    font-size: 25px !important;
+    color: white;
+  }
+  .form-header h2 span {
+    color: orange;
+    font-size: 30px !important;
+    margin-left: 5px;
+  }
+  .form-field i {
+    margin-top: -10px;
+    margin-left: 80px !important;
+  }
+  .top {
+    border-bottom: 0;
+    position: relative;
+    margin: 0 !important;
+    padding-top: 0 !important;
+  }
+  .top .mobile {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-right: 20px;
+    padding-top: 2px;
+  }
+  .top .mobile i {
+    color: grey;
+    font-size: 7vw;
+  }
+  .top .navbar {
+    display: none !important;
+  }
+  input {
+    border: 0;
+  }
+  .mobile-navbar {
+    margin-top: 0 !important;
+    gap: 10px;
+    padding-top: 20px;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    position: fixed;
+    height: 100% !important;
+    width: 300px;
+    right: -2000px;
+    top: 0;
+    margin-left: 50%;
+    background-color: #333333;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    color: black !important;
+    -webkit-transition: 0.3s !important;
+    transition: 0.3s !important;
+  }
+  .mobile-navbar .cancel {
+    padding-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: white;
+    padding-bottom: 20px;
+  }
+  .mobile-navbar .cancel i {
+    font-size: 7vw;
+  }
+  .mobile-navbar li {
+    padding-top: 20px;
+    list-style: none;
+    color: white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .mobile-navbar li .active {
+    color: orange;
+  }
+  .mobile-navbar li #login {
+    border: 1px solid orange;
+    padding: 10px 25px;
+    border-radius: 20px;
+  }
+  .mobile-navbar li #login:hover {
+    background-color: orange !important;
+    color: white !important;
+  }
+  .mobile-navbar li #signup {
+    border: 1px solid orange;
+    background-color: orange;
+    padding: 10px 25px;
+    border-radius: 20px;
+  }
+  .mobile-navbar li #signup:hover {
+    background: transparent;
+    color: white !important;
+  }
+  .mobile-navbar li a {
+    color: white;
+    text-decoration: none;
+  }
+  .mobile-navbar li a:hover {
+    color: orange !important;
+  }
+}
+/*# sourceMappingURL=signup.css.map */

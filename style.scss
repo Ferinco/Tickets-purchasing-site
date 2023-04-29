@@ -107,6 +107,7 @@ color: white;
   border-bottom: 1px solid grey;
   align-items: center;
   height: 7vh;
+  margin: 0 !important;
   .navbar {
     width: 80%;
     display: flex;
@@ -156,12 +157,14 @@ color: white;
     display: none;
   }
   .intro {
-    width: 60%;
-    margin-left: 50%;
-    margin-top: 10%;
+    width: 80%;
+    margin: auto !important;
+ justify-content: center;
+ text-align: center;
+    margin-top: 15% !important;
     color: white;
     &-header {
-      width: 60%;
+      width: 100%;
       text-transform: capitalize;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -169,13 +172,16 @@ color: white;
       font-size: 4vw;
     }
     &-body {
-      width: 70%;
+      margin: auto;
+      width: 80%;
       font-family: monospace;
       font-size: 25px;
     }
   }
-
-  .ticket {
+.ticket{
+  margin-top: 50px !important;
+}
+  .ticket, .mobile-ticket {
     width: 80vw;
     display: flex;
     flex-direction: column;
@@ -716,72 +722,201 @@ margin-top: 5vh !important;
     }
   }
 }
-
-.signup-page{
-  background-color: white !important;
-  .signup-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+#login-page{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(29, 29, 29) !important;
+  .mobile-navbar{
+    display: none;
   }
-  
-  .signup-form h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .form-field {
-    margin-bottom: 20px;
-  }
-  
-  .form-field label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .form-field input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .form-actions a {
-    color: #2196f3;
-    text-decoration: none;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    color: #fff;
-    background-color: #2196f3;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #0c7cd5;
-  }
-  
+  .top{
+position: relative;
+.navbar{
+  width: 74%;
 }
+  }
+  .container{
+ min-width: 300px;
+    height: 100%;
+    max-width:500px ;
+    margin-left: 10%;
+    .login-form{
+      margin: 10%;
+      margin-top: 30%;
+      .form-header {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        h2 {
+          font-weight: 700;
+          font-family: sans-serif;
+          font-size: 22px;
+          color: white;
+        }
+        span {
+          color: rgb(175, 175, 175);
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+          a {
+            color: orange;
+            margin-left: 5px;
+            font-size: 15px;
+          }
+        }
+      }
+      .passfield{
+        display: flex;
+        
+i{
+  margin-top: -5px;
+  margin-left: 30px !important;
+}
+      }
+      .form-field {
+        margin: 20px 0;
+        padding: 5px 10px;
+        
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(39, 38, 38) !important;
+        max-width: 300px;
+        min-width: 300px;
+        background: transparentize($color: rgb(15, 14, 14), $amount: 0.2);
+        border: 3px solid white;
+        &:hover {
+          border: 4px solid orange;
+
+        }
+        label{
+color: rgb(170, 170, 170);
+font-size: 15px;
+        }
+        input{
+          background: transparent;
+          outline: 0;
+          color: white;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+      }
+        .form-actions {
+    display: flex;
+    margin-top: 30px;
+    button {
+      display: inline-block;
+      padding: 15px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      background-color: orange;
+      border: none;
+      cursor: pointer;
+      &:hover{
+      border: 4px solid white;
+      }
+    }
+  }
+    }
+  }
+  @media screen and (min-width: 300px) and (max-width: 800px) {
+
+.login-form{
+  margin-left: 0 !important;
+}
+    .top {
+      border-bottom: 0;
+      position: relative;
+      margin: 0 !important;
+      padding-top: 0 !important;
+      .mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        padding-right: 20px;
+        padding-top: 2px;
+        i {
+          color: grey;
+          font-size: 7vw;
+        }
+      }
+      .navbar {
+        display: none !important;
+      }
+    }
+    .mobile-navbar {
+      height: 100%;
+      gap: 10px;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+      position: fixed;
+      height: 100vh;
+      width: 300px;
+      right: -2000px;
+      top: 0;
+      margin-left: 50%;
+      background-color: rgb(51, 51, 51);
+      // background: opacify($color: , $amount: 0);
+      align-items: start;
+      color: black !important;
+      transition: 0.3s !important;
+      .cancel {
+        padding-top: 0;
+        display: flex;
+        color: white;
+        padding-bottom: 20px;
+        i {
+          font-size: 7vw;
+        }
+      }
+      li {
+        padding-top: 20px;
+        list-style: none;
+        color: white;
+        align-items: center;
+        text-align: center;
+        .active {
+          color: orange;
+        }
+        #login {
+          border: 1px solid orange;
+          padding: 10px 25px;
+          border-radius: 20px;
+          &:hover {
+            background-color: orange !important;
+            color: white !important;
+          }
+        }
+        #signup {
+          border: 1px solid orange;
+          background-color: orange;
+          padding: 10px 25px;
+          border-radius: 20px;
+          &:hover {
+            background: transparent;
+            color: white !important;
+          }
+        }
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: orange !important;
+          }
+        }
+      }
+    }
+  
+  }
+}
+
+
 @media screen and (min-width: 300px) and (max-width: 800px) {
   body {
     margin: 0;
@@ -890,7 +1025,8 @@ margin-top: 5vh !important;
     width: 100%;
 }
   .banner {
-    height: 100vh;
+    gap: 0 !important;
+    height: 100vh !important;
     width: 100% !important;
     // background: black !important;
     // border-bottom-right-radius: 50% 30% ;
@@ -956,7 +1092,7 @@ margin-top: 5vh !important;
       justify-content: center;
       align-items: center;
       margin: auto;
-      height: 300px;
+      height: 300px  !important;
       box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       position: relative;

@@ -7,21 +7,23 @@ const reservationsBtn = document.getElementById("reservations");
 const reservationFields = document.getElementById("ticket-fields");
 const bookingsFields = document.getElementById("booking-fields");
 const ticketBtns = document.getElementById("ticket-buttons");
-const destination = document.getElementById("destination").value;
-const locatioN = document.getElementById("location").value;
-const adult = document.getElementById("adult").value;
-const child = document.getElementById("child").value;
-const date = document.getElementById("datepicker").value;
 
-let price;
-if (destination === "Mars") {
-  price = 9865 * adult + 15000 * child;
-} else if (destination === "The Moon") {
-  price = 5000 * adult + 10000 * child;
-} else if (destination === "Venus") {
-  price = 5000 * adult + 10000 * child;
-}
+
+
 function calculatePrice() {
+  const destination = document.getElementById("destination").value;
+  const locatioN = document.getElementById("location").value;
+  const adult = document.getElementById("adult").value;
+  const child = document.getElementById("child").value;
+  const date = document.getElementById("datepicker").value;
+  let price;
+  if (destination === "Mars") {
+    price = 9865 * adult + 15000 * child;
+  } else if (destination === "The Moon") {
+    price = 5000 * adult + 10000 * child;
+  } else if (destination === "Venus") {
+    price = 5000 * adult + 10000 * child;
+  }
   const ticket = document.createElement("div");
   ticket.innerHTML = `<div id="ticket">
 <div class="ticket-header">
@@ -56,7 +58,7 @@ function cancelTicket() {
 
 function bookingCheck() {
   bookingsBtn.addEventListener("click", (e) => {
-    // reservatiionFields.style.display= "none"
+    // animate the display of reservtion and bookings
     reservationFields.style.marginLeft = "-3000px";
     bookingsFields.style.display = "flex";
     bookingsFields.style.marginRight = "0";
@@ -65,12 +67,24 @@ function bookingCheck() {
 }
 reservationsBtn.addEventListener("click", (e) => {
   bookingsFields.style.display = "none";
-  // reservatiionFields.style.display = "flex"
   reservationFields.style.marginLeft = "0px";
   ticketBtns.style.paddingTop = "0px";
 });
 
 function addToBookings() {
+  const destination = document.getElementById("destination").value;
+  const locatioN = document.getElementById("location").value;
+  const adult = document.getElementById("adult").value;
+  const child = document.getElementById("child").value;
+  const date = document.getElementById("datepicker").value;
+  let price;
+  if (destination == "Mars") {
+    price = 9865 * adult + 15000 * child;
+  } else if (destination == "The Moon") {
+    price = 5000 * adult + 10000 * child;
+  } else if (destination == "Venus") {
+    price = 5000 * adult + 10000 * child;
+  }
   const reservation = document.createElement("div");
   reservation.innerHTML = `
     <div id="first-reservation">
@@ -82,8 +96,6 @@ function addToBookings() {
     <button onclick="removeReservation()">remove booking</button></div>
     </div>
     `;
-  // const ticketDiv = document.getElementById("paper");
-  // ticketDiv.parentNode.removeChild(ticketDiv);
   const firstReservation = document.getElementById("bookings-1");
   firstReservation.appendChild(reservation);
   cancelTicket();
@@ -123,17 +135,17 @@ function showPlanet(planet) {
 }
 
 const navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach((navLink)=>{
+navLinks.forEach((navLink) => {
   // var activeNav =document.querySelector(".active")
-  navLink.addEventListener("click",(e)=>{
-   if(navLink.classList.contains(".active")){
-navLink.classList.remove(".active")
-   }
-   else{
-    navLink.classList.add(".active")
-   }
-  })
-})
+  navLink.addEventListener("click", (e) => {
+    if (navLink.classList.contains(".active")) {
+      navLink.classList.remove(".active");
+    }
+    else {
+      navLink.classList.add(".active");
+    }
+  });
+});
 
 mobileBar.addEventListener("click", (e) => {
   navbar.classList.add("wait");
@@ -142,6 +154,8 @@ mobileBar.addEventListener("click", (e) => {
 cancelBar.addEventListener("click", (e) => {
   navbar.style.marginRight = "-300px";
 });
+
+
 
 
 AOS.init({
