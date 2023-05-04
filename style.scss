@@ -768,6 +768,14 @@ position: relative;
       }
       .passfield{
         display: flex;
+        justify-content: space-between;
+        .eye{
+          height: 100%;
+          display: flex;
+          flex-direction: column !important;
+          align-items: center !important;
+          
+        }
         
 i{
   margin-top: -5px;
@@ -826,7 +834,17 @@ font-size: 15px;
 
 .login-form{
   margin-left: 0 !important;
-}
+  .passfield{
+    display: flex;
+    justify-content: space-between;
+    .eye{
+      height: 100%;
+      display: flex;
+      flex-direction: column !important;
+      align-items: center !important;
+      
+    }
+}}
     .top {
       border-bottom: 0;
       position: relative;
@@ -927,6 +945,7 @@ font-size: 15px;
   .top {
     border-bottom: 0;
     position: fixed;
+    z-index: 999 !important;
     .mobile {
       width: 100%;
       display: flex;
@@ -940,6 +959,7 @@ font-size: 15px;
       }
     }
     .mobile-navbar {
+     
       gap: 10px;
       padding-top: 20px;
       display: flex;
@@ -1048,12 +1068,16 @@ font-size: 15px;
       top: 70%;
       button {
         background-color: white;
-        color: black;
         border: 0;
         padding: 10px 30px;
         border-radius: 20px;
         font-size: 5vw;
         font-family: monospace;
+        a{
+          color: grey;
+          font-weight: 500;
+          text-decoration: none;
+        }
       }
     }
 

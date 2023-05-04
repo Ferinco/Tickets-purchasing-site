@@ -9,7 +9,7 @@ const bookingsFields = document.getElementById("booking-fields");
 const ticketBtns = document.getElementById("ticket-buttons");
 
 
-
+// Calculate ticket price based on traveller's destination
 function calculatePrice() {
   const destination = document.getElementById("destination").value;
   const locatioN = document.getElementById("location").value;
@@ -24,6 +24,7 @@ function calculatePrice() {
   } else if (destination === "Venus") {
     price = 5000 * adult + 10000 * child;
   }
+  // Generate ticket for the trip
   const ticket = document.createElement("div");
   ticket.innerHTML = `<div id="ticket">
 <div class="ticket-header">
@@ -58,7 +59,7 @@ function cancelTicket() {
 
 function bookingCheck() {
   bookingsBtn.addEventListener("click", (e) => {
-    // animate the display of reservtion and bookings
+    // Animate the display of bookings
     reservationFields.style.marginLeft = "-3000px";
     bookingsFields.style.display = "flex";
     bookingsFields.style.marginRight = "0";
@@ -66,12 +67,14 @@ function bookingCheck() {
   });
 }
 reservationsBtn.addEventListener("click", (e) => {
+   // Animate the display of reservtions
   bookingsFields.style.display = "none";
   reservationFields.style.marginLeft = "0px";
   ticketBtns.style.paddingTop = "0px";
 });
 
 function addToBookings() {
+  // Add ticket details to bookings
   const destination = document.getElementById("destination").value;
   const locatioN = document.getElementById("location").value;
   const adult = document.getElementById("adult").value;
@@ -136,7 +139,6 @@ function showPlanet(planet) {
 
 const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((navLink) => {
-  // var activeNav =document.querySelector(".active")
   navLink.addEventListener("click", (e) => {
     if (navLink.classList.contains(".active")) {
       navLink.classList.remove(".active");
@@ -187,4 +189,3 @@ AOS.init({
 });
 
 
-//  document.querySelector(".about-body-images").style.marginleft = "-20000px";

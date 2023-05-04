@@ -1080,6 +1080,23 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#login-page .container .login-form .passfield .eye {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
 }
 
 #login-page .container .login-form .passfield i {
@@ -1266,6 +1283,7 @@ input {
   .top {
     border-bottom: 0;
     position: fixed;
+    z-index: 999 !important;
   }
   .top .mobile {
     width: 100%;
@@ -1428,12 +1446,16 @@ input {
   }
   .banner .mid-button button {
     background-color: white;
-    color: black;
     border: 0;
     padding: 10px 30px;
     border-radius: 20px;
     font-size: 5vw;
     font-family: monospace;
+  }
+  .banner .mid-button button a {
+    color: grey;
+    font-weight: 500;
+    text-decoration: none;
   }
   .banner .intro {
     width: 80%;
