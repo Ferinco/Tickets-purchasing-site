@@ -137,17 +137,13 @@ function showPlanet(planet) {
   selectedButton.classList.add("active");
 }
 
-const navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach((navLink) => {
-  navLink.addEventListener("click", (e) => {
-    if (navLink.classList.contains(".active")) {
-      navLink.classList.remove(".active");
-    }
-    else {
-      navLink.classList.add(".active");
-    }
-  });
-});
+// const navLinks = document.querySelectorAll(".nav-link");
+// navLinks.forEach((navLink) => {
+//   var activeButton = document.querySelector(".active");
+//   navLink.addEventListener("click", (e) => {
+// navLink.style.color = "orange"
+//   });
+// });
 
 mobileBar.addEventListener("click", (e) => {
   navbar.classList.add("wait");
