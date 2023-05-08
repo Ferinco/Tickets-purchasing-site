@@ -4,6 +4,27 @@ body {
   background-color: #0e0b0b !important;
 }
 
+#loading {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 input {
   border: 0;
 }
@@ -118,6 +139,13 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
 }
 
 #first-reservation #reservation-removal {
@@ -214,7 +242,7 @@ input {
 }
 
 .banner {
-  height: auto !important;
+  height: auto;
   gap: 50px !important;
   background-color: black;
   background-image: url(Images/newbackalt2.jpg);
@@ -943,6 +971,7 @@ input {
 
 .travellers .travellers-body .one .image img,
 .travellers .travellers-body .two .image img {
+  display: block;
   width: 150px;
   height: 180px;
   border-radius: 10px;

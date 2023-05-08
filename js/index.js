@@ -7,7 +7,14 @@ const reservationsBtn = document.getElementById("reservations");
 const reservationFields = document.getElementById("ticket-fields");
 const bookingsFields = document.getElementById("booking-fields");
 const ticketBtns = document.getElementById("ticket-buttons");
-
+const ticketDiv = document.getElementById("paper");
+const loading = document.getElementById("loading")
+loading.style.display="none"
+const preloader = document.getElementById("preloader")
+window.addEventListener("load",()=>{
+preloader.style.display = "none"
+document.getElementById("galaxy").style.display = "block"
+})
 
 // Calculate ticket price based on traveller's destination
 function calculatePrice() {
@@ -16,6 +23,8 @@ function calculatePrice() {
   const adult = document.getElementById("adult").value;
   const child = document.getElementById("child").value;
   const date = document.getElementById("datepicker").value;
+  loading.style.display = "flex"
+  document.getElementById("landing-page").style.height= "100vh"
   let price;
   if (destination === "Mars") {
     price = 9865 * adult + 15000 * child;
@@ -25,8 +34,9 @@ function calculatePrice() {
     price = 5000 * adult + 10000 * child;
   }
   // Generate ticket for the trip
-  const ticket = document.createElement("div");
-  ticket.innerHTML = `<div id="ticket">
+  generateTicket = () => {
+    const ticket = document.createElement("div");
+    ticket.innerHTML = `<div id="ticket">
 <div class="ticket-header">
 <h2>Demo Ticket</h2>
 <button onclick="cancelTicket()" class="fa fa-times"></button>
@@ -45,8 +55,22 @@ function calculatePrice() {
     </div>
         </div>
     `;
-  const ticketDiv = document.getElementById("paper");
-  ticketDiv.appendChild(ticket);
+
+    const ticketPromise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, 2000);
+    });
+    ticketPromise.then(() => {
+      document.getElementById("landing-page").style.height= "auto"
+      loading.style.display="none"
+      ticketDiv.appendChild(ticket);
+
+    });
+
+
+  };
+  generateTicket()
 }
 function cancelTicket() {
   // Remove the ticket from the page
@@ -67,7 +91,7 @@ function bookingCheck() {
   });
 }
 reservationsBtn.addEventListener("click", (e) => {
-   // Animate the display of reservtions
+  // Animate the display of reservtions
   bookingsFields.style.display = "none";
   reservationFields.style.marginLeft = "0px";
   ticketBtns.style.paddingTop = "0px";
@@ -90,8 +114,8 @@ function addToBookings() {
   }
   const reservation = document.createElement("div");
   reservation.innerHTML = `
-    <div id="first-reservation">
-    <div id="content">
+  <div id="first-reservation">
+  <div id="content">
     <p>Reservations: Pending (until verification and purchase of ticket)</p>
     <p>Ticket Price: $${price}</p>
     </div>
@@ -99,11 +123,25 @@ function addToBookings() {
     <button onclick="removeReservation()">remove booking</button></div>
     </div>
     `;
-  const firstReservation = document.getElementById("bookings-1");
-  firstReservation.appendChild(reservation);
-  cancelTicket();
-  alert("click on bookings check to check for details");
-  document.getElementById("bookings-2").style.display = "none";
+    const firstReservation = document.getElementById("bookings-1");
+    cancelTicket();
+    const boookingsPromise = new Promise(resolve=>{
+      setTimeout(()=>{
+        resolve()
+      },2000)
+    })
+    loading.style.display = "flex"
+    document.getElementById("landing-page").style.height= "100vh"
+    document.getElementById("ticket-form").style.display= "none"
+  boookingsPromise.then(()=>{
+    loading.style.display = "none"
+    document.getElementById("ticket-form").style.display= "flex"
+    document.getElementById("landing-page").style.height= "auto"
+    firstReservation.appendChild(reservation);
+    document.getElementById("bookings-2").style.display = "none";
+    alert("click on bookings check to check for details");
+
+  })
 }
 
 submitBtn.addEventListener("click", (e) => {
@@ -127,7 +165,7 @@ function showPlanet(planet) {
   for (var i = 0; i < planetInfos.length; i++) {
     planetInfos[i].style.display = "none";
   }
-
+// document.querySelector(".about-body-images").style.marginLeft ="3000px"
   var planetInfo = document.querySelector("#" + planet + "-info");
   planetInfo.style.display = "flex";
 
