@@ -4,45 +4,63 @@ const reservationFields = document.getElementById("ticket-fields");
 const bookingsFields = document.getElementById("booking-fields");
 const ticketBtns = document.getElementById("ticket-buttons");
 const submitBtn = document.getElementById("form-submit");
+const ticketDiv = document.getElementById("paper");
+loading.style.display="none"
 
 function calculatePrice() {
-    const destination = document.getElementById("destination").value;
-    const locatioN = document.getElementById("location").value;
-    const adult = document.getElementById("adult").value;
-    const child = document.getElementById("child").value;
-    const date = document.getElementById("datepicker").value;
-    let price;
-    if (destination === "Mars") {
-      price = 9865 * adult + 15000 * child;
-    } else if (destination === "The Moon") {
-      price = 5000 * adult + 10000 * child;
-    } else if (destination === "Venus") {
-      price = 5000 * adult + 10000 * child;
-    }
-    // Generate ticket for the trip
+  const destination = document.getElementById("destination").value;
+  const locatioN = document.getElementById("location").value;
+  const adult = document.getElementById("adult").value;
+  const child = document.getElementById("child").value;
+  const date = document.getElementById("datepicker").value;
+  loading.style.display = "flex"
+  let price;
+  if (destination === "Mars") {
+    price = 9865 * adult + 15000 * child;
+  } else if (destination === "The Moon") {
+    price = 5000 * adult + 10000 * child;
+  } else if (destination === "Venus") {
+    price = 5000 * adult + 10000 * child;
+  }
+  // Generate ticket for the trip
+  generateTicket = () => {
     const ticket = document.createElement("div");
     ticket.innerHTML = `<div id="ticket">
-  <div class="ticket-header">
-  <h2>Demo Ticket</h2>
-  <button onclick="cancelTicket()" class="fa fa-times"></button>
-  </div>
-  <div class="ticket-body">
-  <p>Current location: ${locatioN}</p>
-  <p>Proposed destination: ${destination}</p>
-  <p>Number of adult(s): ${adult}</p>
-  <p>Number of child(ren): ${child}</p>
-  <p>price: $${price}</p>
-  <p>Proposed date: ${date}</p>
-  </div>
-      <div class="ticket-end">
-      // <p>Add demo ticket to bookings to see details later.</p>
-      <div class="buttons"><button onclick="downloadTicket()">Download Ticket</button> <button onclick="addToBookings()">Add to Bookings</button></div>
-      </div>
-          </div>
-      `;
-    const ticketDiv = document.getElementById("paper");
-    ticketDiv.appendChild(ticket);
-  }
+<div class="ticket-header">
+<h2>Demo Ticket</h2>
+<button onclick="cancelTicket()" class="fa fa-times"></button>
+</div>
+<div class="ticket-body">
+<p>Current location: ${locatioN}</p>
+<p>Proposed destination: ${destination}</p>
+<p>Number of adult(s): ${adult}</p>
+<p>Number of child(ren): ${child}</p>
+<p>price: $${price}</p>
+<p>Proposed date: ${date}</p>
+</div>
+    <div class="ticket-end">
+  
+    <div class="buttons"><button onclick="downloadTicket()">Download Ticket</button> <button onclick="addToBookings()">Add to Bookings</button></div>
+    </div>
+        </div>
+    `;
+
+    const ticketPromise = new Promise(resolve => {
+      setTimeout(() => {
+        resolve();
+      }, 2000);
+    });
+    ticketPromise.then(() => {
+ 
+      loading.style.display="none"
+      ticketDiv.appendChild(ticket);
+
+    });
+
+
+  };
+  generateTicket()
+}
   function cancelTicket() {
     // Remove the ticket from the page
     const ticketDiv = document.getElementById("paper");

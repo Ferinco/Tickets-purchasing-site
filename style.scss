@@ -3,6 +3,11 @@ body {
   padding: 0;
   background-color: rgb(14, 11, 11) !important;
 }
+p{
+  font-weight: 400;
+ font-size: 16px;
+
+}
 #loading{
   width: 100%;
   justify-content: center;
@@ -325,26 +330,28 @@ color: white;
 .about {
     padding-top: 50px;
     padding-bottom: 50px;
-  margin-top: 15vh !important;
+  margin-top: 0;
   width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
+  height: auto;
   &-intro {
     display: flex;
     color: white;
+    align-items: center;
     .header {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
-      font-size: 2vw;
+      font-size: 30px;
       width: 50%;
       font-weight: 500;
     }
     .body {
       width: 50%;
       font-family: sans-serif;
-      font-size: 1.2vw;
+      font-size: 18px;
     }
   }
   &-buttons {
@@ -366,16 +373,50 @@ color: white;
   &-body {
     display: flex;
     &-images {
-      width: 70% !important;
-      display: flexbox;
+      width: auto !important;
+      display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between !important;
-      margin-top: 40px;
-      // margin-left: -3000px;
-      // transition: 0.3s;
-      img {
-        border-radius: 10px;
+margin-top: 20px;
+gap: 20px;
+      .upper-images{
+        width: 400px;
+        display: flex;
+        gap: 20px;
+        height: 200px;
+        &-1, &-2{
+width: 250px;
+height: 100%;
+img{
+  object-fit: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+        }
+
       }
+      .lower-image{
+        width: 400px;
+        height: 250px;
+        img{
+          object-fit: cover;
+          display: block;
+          border-radius: 10px;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      // img {
+      //   border-radius: 10px;
+      //   display: block;
+      //   width: 100%;
+      //   height: 100%;
+      //   object-fit: cover;
+        
+      // }
     }
     &-about {
       height: 100%;
@@ -384,7 +425,7 @@ color: white;
       color: white;
       margin-left: 40px;
       margin-top: 20px;
-      width: 50%;
+      width: auto;
       a {
         display: none;
       }
@@ -402,13 +443,13 @@ color: white;
 
       .intro {
         p {
-          font-size: 1.2vw;
+          font-size: 18px;
           font-family: sans-serif;
           font-weight: 100;
         }
       }
       .number {
-        font-size: 1.5vw;
+        font-size: 2vw;
         font-weight: 700;
         // margin-top: -20px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -425,7 +466,7 @@ color: white;
       // }
       .amount {
         color: orange;
-        font-size: 2vw;
+        font-size: 30px;
       }
       .hero {
         display: flex;
@@ -434,14 +475,14 @@ color: white;
         text-align: left;
         &-header {
           font-weight: bold;
-          font-size: 2vw;
+          font-size: 30px;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
             Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
             sans-serif;
         }
         &-body {
           margin-left: 10px;
-          font-size: 1.2vw;
+          font-size: 20px;
         }
       }
       .numbers {
@@ -449,9 +490,9 @@ color: white;
         flex-direction: row;
         width: 100%;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 20px;
         h4 {
-          font-size: 1.2vw;
+          font-size: 18px;
           font-weight: 100;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
             Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -468,7 +509,7 @@ color: white;
         align-items: center;
         text-align: left !important;
         h4 {
-          font-size: 1.2vw;
+          font-size: 2vw;
           font-weight: 100;
           font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
             Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -648,14 +689,16 @@ margin-top: 5vh !important;
 .travellers {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: auto;
+  padding-bottom: 100px;
   width: 80%;
   margin: auto;
   color: white;
-  margin-top: 15vh;
+  padding-top: 50px;
   .carousel {
     margin-top: 5vh !important;
-    height: 60%;
+    height: auto;
+    padding-bottom: 70px;
   }
   .carousel-indicators {
     display: flex;
@@ -679,7 +722,7 @@ margin-top: 5vh !important;
     }
   }
   .travellers-body {
-    margin-top: 5vh;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -690,11 +733,14 @@ margin-top: 5vh !important;
       flex-direction: row;
       gap: 20px;
       .image {
+        width: 200px;
+        height: 180px;
         img {
-          display: block;
-          width: 150px;
-          height: 180px;
           border-radius: 10px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
       .bio {
@@ -705,10 +751,14 @@ margin-top: 5vh !important;
           gap: 10px;
           align-items: center;
           &-image {
+            overflow: hidden;
+            border-radius: 50%;
+            height: 80px;
+            width: 70px;
             img {
-              border-radius: 50%;
-              height: 80px;
-              width: 70px;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
             }
           }
         }
@@ -1583,6 +1633,7 @@ input {
       }
     }
   }
+
   #ticket {
     width: 80%;
     height: 450px;
@@ -1592,6 +1643,7 @@ input {
     background: transparentize($color: gray, $amount: 0.2);
 
     .ticket-header {
+      padding-top: 50px;
       width: 80%;
       margin: auto;
       display: flex;
@@ -1655,7 +1707,7 @@ input {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
           Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
           sans-serif;
-        font-size: 8vw;
+        font-size: 30px;
         width: 100%;
         font-weight: 700;
         text-align: center;
@@ -1663,7 +1715,7 @@ input {
       .body {
         width: 100%;
         font-family: sans-serif;
-        font-size: 5vw;
+        font-size: 20px;
         text-align: center;
       }
     }
@@ -1694,22 +1746,50 @@ input {
       flex-direction: column;
       gap: 20px;
       &-images {
-        width: 100% !important;
-        display: flexbox;
+        width: auto !important;
+        display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between !important;
-        margin-top: 10px;
-        #last-image {
+  margin-top: 20px;
+  gap: 20px;
+        .upper-images{
           width: 300px;
-          height: 150px;
+          display: flex;
+          gap: 20px;
+          height: 200px;
+            &-1, &-2{
+  width: 150px;
+  height: 100%;
+  img{
+    object-fit: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+  }
+          }
+  
         }
-        img {
-          border-radius: 10px;
-          width: 120px;
-          height: 110px;
-          margin-top: 10px !important;
-          margin-left: 0 !important;
+        .lower-image{
+          width: 300px;
+          height: 200px;
+          img{
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+          }
         }
+        // img {
+        //   border-radius: 10px;
+        //   display: block;
+        //   width: 100%;
+        //   height: 100%;
+        //   object-fit: cover;
+          
+        // }
       }
       &-about {
         height: 100%;
@@ -1723,6 +1803,7 @@ input {
           display: flex;
           color: orange;
           text-decoration: none;
+          font-style: italic;
         }
         .distance,
         .ratings {
@@ -1730,8 +1811,8 @@ input {
         }
         button {
           border: 0;
-          font-size: 4vw;
-          padding: 5px 10px;
+          font-size: 14px;
+          padding: 10px 15px;
           background-color: orange;
           border-radius: 10px;
           color: white;
@@ -1742,7 +1823,7 @@ input {
           margin-top: -10px;
 
           p {
-            font-size: 5vw;
+            font-size: 20px;
             font-family: sans-serif;
             font-weight: 100;
           }
@@ -1776,14 +1857,14 @@ input {
           text-align: left;
           &-header {
             font-weight: bold;
-            font-size: 6vw;
+            font-size: 30px;
             font-family: system-ui, -apple-system, BlinkMacSystemFont,
               "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
               "Helvetica Neue", sans-serif;
           }
           &-body {
             margin-left: 2px;
-            font-size: 4vw;
+            font-size: 20px;
             font-weight: 500;
           }
         }

@@ -1,28 +1,25 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #0e0b0b !important;
+  background-color: rgb(14, 11, 11) !important;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
 }
 
 #loading {
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 #preloader {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
@@ -37,121 +34,74 @@ input {
   background-color: gray;
   background: rgba(128, 128, 128, 0.9);
 }
-
 #ticket .ticket-header {
   width: 80%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid orange;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   color: white;
 }
-
 #ticket .ticket-header button {
   border: 0;
   padding: 0;
   background: transparent;
   color: black;
 }
-
 #ticket .ticket-body {
   margin-top: 20px !important;
   width: 80%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: white;
 }
-
 #ticket .ticket-body p {
   margin-top: -7px;
 }
-
 #ticket .ticket-end {
   margin-top: -40px !important;
   width: 80%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #ticket .ticket-end p {
   color: orange;
 }
-
 #ticket .ticket-end .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 10px;
 }
-
 #ticket .ticket-end .buttons button {
   border: 0;
   color: white;
   background-color: black;
 }
-
 #ticket .ticket-end .buttons button:hover {
   color: black;
   background-color: orange;
 }
 
 #first-reservation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
   color: #fff;
   gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #first-reservation #content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
 }
-
 #first-reservation #reservation-removal {
   height: 100%;
 }
-
 #first-reservation #reservation-removal button {
   background: red;
   padding: 5px 10px;
@@ -163,20 +113,12 @@ input {
   color: white;
   margin-top: -30px;
   margin-right: -3000px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   height: 80%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   display: none;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   position: relative;
   width: 80%;
 }
@@ -184,59 +126,37 @@ input {
 .top {
   position: absolute;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid grey;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 7vh;
   margin: 0 !important;
 }
-
 .top .navbar {
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .top .navbar a {
   text-decoration: none !important;
   color: #fff !important;
 }
-
 .top .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 25px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .top .navbar ul .active {
   color: orange !important;
 }
-
 .top .navbar ul li {
   list-style: none;
   color: #fff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
-
 .top .navbar ul li a:hover {
   color: orange !important;
 }
@@ -249,71 +169,47 @@ input {
   background-repeat: no-repeat;
   background-position: left;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .banner .mobile-navbar {
   display: none;
 }
-
 .banner .mid-button {
   display: none;
 }
-
 .banner .intro {
   width: 80%;
   margin: auto !important;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
   margin-top: 15% !important;
   color: white;
 }
-
 .banner .intro-header {
   width: 100%;
   text-transform: capitalize;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 4vw;
 }
-
 .banner .intro-body {
   margin: auto;
   width: 80%;
   font-family: monospace;
   font-size: 25px;
 }
-
 .banner .ticket {
   margin-top: 50px !important;
 }
-
 .banner .ticket, .banner .mobile-ticket {
   width: 80vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: auto;
   height: 150px;
-  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   position: relative;
   z-index: 1;
@@ -321,27 +217,19 @@ input {
   overflow: hidden;
   border-radius: 10px;
 }
-
 .banner .ticket i, .banner .mobile-ticket i {
   color: white;
   font-size: 20px !important;
 }
-
 .banner .ticket span, .banner .mobile-ticket span {
   display: none;
 }
-
 .banner .ticket form, .banner .mobile-ticket form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   display: flex;
   width: 90%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .banner .ticket:before, .banner .mobile-ticket:before {
   content: "";
   position: absolute;
@@ -351,63 +239,42 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-          box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
   margin: -20px;
 }
-
 .banner .ticket-buttons, .banner .mobile-ticket-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding-bottom: 5px;
   border-bottom: 1px solid grey;
 }
-
 .banner .ticket-buttons button, .banner .mobile-ticket-buttons button {
   border: 0;
   background: 0;
   color: white;
 }
-
 .banner .ticket-buttons button:hover, .banner .mobile-ticket-buttons button:hover {
   color: orange;
 }
-
 .banner .ticket-buttons button:first-child, .banner .mobile-ticket-buttons button:first-child {
   margin-left: 48px;
 }
-
 .banner .ticket-fields, .banner .mobile-ticket-fields {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 90%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-top: 25px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: 0.4s;
+  align-items: center;
   transition: 0.4s;
 }
-
 .banner .ticket-fields form, .banner .mobile-ticket-fields form {
   width: 100%;
   margin: auto;
 }
-
 .banner .ticket-fields .field, .banner .mobile-ticket-fields .field {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .banner .ticket-fields select,
 .banner .ticket-fields #datepicker, .banner .mobile-ticket-fields select,
 .banner .mobile-ticket-fields #datepicker {
@@ -417,7 +284,6 @@ input {
   padding-left: 5px;
   color: grey;
 }
-
 .banner .ticket-fields-button button, .banner .mobile-ticket-fields-button button {
   height: 40px;
   width: 100px;
@@ -425,44 +291,31 @@ input {
   background-color: orange;
   border: 0;
   color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1vw;
   text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .banner .ticket-fields-button button:hover, .banner .mobile-ticket-fields-button button:hover {
   background-color: white;
   color: black;
 }
-
 .banner .closure {
   width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 5vh;
 }
-
 .banner .closure .link {
   color: orange;
   margin-left: 10px;
   cursor: pointer;
 }
-
 .banner .closure .link:hover {
   color: white;
 }
-
 .banner .closure p {
   color: white;
 }
@@ -474,103 +327,103 @@ input {
 .about {
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-top: 15vh !important;
+  margin-top: 0;
   width: 80%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
+  height: auto;
 }
-
 .about-intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: white;
+  align-items: center;
 }
-
 .about-intro .header {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 2vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
   width: 50%;
   font-weight: 500;
 }
-
 .about-intro .body {
   width: 50%;
   font-family: sans-serif;
-  font-size: 1.2vw;
+  font-size: 18px;
 }
-
 .about-buttons {
   border-bottom: 1px solid grey;
   padding-bottom: 20px;
   margin-top: 10vh;
 }
-
 .about-buttons .active {
   color: orange;
 }
-
 .about-buttons button {
   border: 0;
   background: 0;
   color: white;
 }
-
 .about-buttons button:hover {
   color: orange;
 }
-
 .about-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .about-body-images {
-  width: 70% !important;
-  display: flexbox;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
-  margin-top: 40px;
+  width: auto !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+  margin-top: 20px;
+  gap: 20px;
 }
-
-.about-body-images img {
+.about-body-images .upper-images {
+  width: 400px;
+  display: flex;
+  gap: 20px;
+  height: 200px;
+}
+.about-body-images .upper-images-1, .about-body-images .upper-images-2 {
+  width: 250px;
+  height: 100%;
+}
+.about-body-images .upper-images-1 img, .about-body-images .upper-images-2 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 }
-
+.about-body-images .lower-image {
+  width: 400px;
+  height: 250px;
+}
+.about-body-images .lower-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
 .about-body-about {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: white;
   margin-left: 40px;
   margin-top: 20px;
-  width: 50%;
+  width: auto;
 }
-
 .about-body-about a {
   display: none;
 }
-
 .about-body-about .distance,
 .about-body-about .ratings {
   width: 60%;
 }
-
 .about-body-about button {
   border: 0;
   padding: 13px 20px;
@@ -578,96 +431,66 @@ input {
   border-radius: 10px;
   color: white;
 }
-
 .about-body-about .intro p {
-  font-size: 1.2vw;
+  font-size: 18px;
   font-family: sans-serif;
   font-weight: 100;
 }
-
 .about-body-about .number {
-  font-size: 1.5vw;
+  font-size: 2vw;
   font-weight: 700;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 .about-body-about .km {
   font-size: 20px;
   font-weight: 100 !important;
   font-family: monospace;
 }
-
 .about-body-about .amount {
   color: orange;
-  font-size: 2vw;
+  font-size: 30px;
 }
-
 .about-body-about .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  flex-direction: row;
+  align-items: baseline;
   text-align: left;
 }
-
 .about-body-about .hero-header {
   font-weight: bold;
-  font-size: 2vw;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 30px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 .about-body-about .hero-body {
   margin-left: 10px;
-  font-size: 1.2vw;
+  font-size: 20px;
 }
-
 .about-body-about .numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 40px;
+  align-items: center;
+  margin-top: 20px;
 }
-
 .about-body-about .numbers h4 {
-  font-size: 1.2vw;
+  font-size: 18px;
   font-weight: 100;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 .about-body-about #rate {
   font-weight: 800;
   font-size: 1.2vw;
 }
-
 .about-body-about .people {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: left !important;
 }
-
 .about-body-about .people h4 {
-  font-size: 1.2vw;
+  font-size: 2vw;
   font-weight: 100;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .services-section {
@@ -682,27 +505,17 @@ input {
   width: 80%;
   margin-top: 0 !important;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: white;
 }
-
 .services .carousel-indicators {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
-
 .services .carousel-indicators .active {
   background-color: orange;
 }
-
 .services .carousel-indicators li {
   list-style: none !important;
   padding: 5px 10px;
@@ -710,39 +523,27 @@ input {
   border-radius: 50%;
   font-size: 10px;
 }
-
 .services .carousel {
   padding-top: 100px;
   padding-bottom: 100px;
   margin-top: 0 !important;
   height: 60%;
 }
-
 .services .carousel-item {
   width: 100%;
   height: 100%;
 }
-
 .services .carousel-item .body {
   width: 50%;
 }
-
 .services .carousel-item .card {
   margin-left: 50px;
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  flex-direction: column;
+  align-items: left;
   height: 150px;
-  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   position: relative;
   z-index: 1;
@@ -750,7 +551,6 @@ input {
   overflow: hidden;
   border-radius: 10px;
 }
-
 .services .carousel-item .card:before {
   content: "";
   position: absolute;
@@ -760,13 +560,10 @@ input {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-          box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
   margin: -20px;
 }
-
 .services .carousel-item .card h4 {
   margin-left: 20px;
   margin-right: 20px;
@@ -775,7 +572,6 @@ input {
   border-bottom: 1px solid orange;
   color: orange;
 }
-
 .services .carousel-item .card p {
   padding-left: 20px;
   color: white;
@@ -785,257 +581,179 @@ input {
   height: auto;
   margin-top: 5vh !important;
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: auto;
 }
-
 .article-header {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: white;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid gray;
 }
-
 .article-header button {
   color: white;
   padding: 0;
   border: 0;
   background: transparent;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 30px;
 }
-
 .article-header button:hover {
   color: orange;
 }
-
 .article-body {
   padding-top: 50px;
   margin-bottom: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 10px;
 }
-
 .article-body .card {
   width: 300px;
   height: 500px;
   position: relative;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 10px;
-  background-color: #2c2b2b;
+  background-color: rgb(44, 43, 43);
   color: white;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-          box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-
 .article-body .card a {
   display: none;
 }
-
 .article-body .card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: scale(1.05);
   z-index: 1;
 }
-
 .article-body .card img {
   margin-top: 30px;
   width: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .article-body .card-body {
   text-align: left;
 }
-
 .article-body .card-body h5 {
   color: orange;
 }
 
 .travellers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 80vh;
+  flex-direction: column;
+  height: auto;
+  padding-bottom: 100px;
   width: 80%;
   margin: auto;
   color: white;
-  margin-top: 15vh;
+  padding-top: 50px;
 }
-
 .travellers .carousel {
   margin-top: 5vh !important;
-  height: 60%;
+  height: auto;
+  padding-bottom: 70px;
 }
-
 .travellers .carousel-indicators {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
-
 .travellers .carousel-indicators .active {
   color: orange;
 }
-
 .travellers .carousel-indicators li {
   list-style: none !important;
   font-size: 30px;
   color: white;
 }
-
 .travellers-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .travellers-header p {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 30px;
 }
-
 .travellers .travellers-body {
-  margin-top: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-top: 50px;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 40px;
 }
-
 .travellers .travellers-body .one,
 .travellers .travellers-body .two {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   gap: 20px;
 }
-
+.travellers .travellers-body .one .image,
+.travellers .travellers-body .two .image {
+  width: 200px;
+  height: 180px;
+}
 .travellers .travellers-body .one .image img,
 .travellers .travellers-body .two .image img {
-  display: block;
-  width: 150px;
-  height: 180px;
   border-radius: 10px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
 .travellers .travellers-body .one .bio,
 .travellers .travellers-body .two .bio {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .travellers .travellers-body .one .bio .profile,
 .travellers .travellers-body .two .bio .profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
-.travellers .travellers-body .one .bio .profile-image img,
-.travellers .travellers-body .two .bio .profile-image img {
+.travellers .travellers-body .one .bio .profile-image,
+.travellers .travellers-body .two .bio .profile-image {
+  overflow: hidden;
   border-radius: 50%;
   height: 80px;
   width: 70px;
+}
+.travellers .travellers-body .one .bio .profile-image img,
+.travellers .travellers-body .two .bio .profile-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer {
   position: absolute;
   height: 5vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   border-top: 1px solid grey;
   padding-top: 20px;
   color: white;
 }
-
 .footer-nav {
   width: 80%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .footer-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 25px;
 }
-
 .footer-nav ul li {
   list-style: none;
 }
@@ -1043,137 +761,92 @@ input {
 #login-page {
   height: 100vh;
   width: 100%;
-  background-color: #1d1d1d !important;
+  background-color: rgb(29, 29, 29) !important;
 }
-
 #login-page .mobile-navbar {
   display: none;
 }
-
 #login-page .top {
   position: relative;
 }
-
 #login-page .top .navbar {
   width: 74%;
 }
-
 #login-page .login-form {
   max-width: 700px;
   padding-left: 40px;
   margin-top: 10%;
 }
-
 @media screen and (min-width: 300px) and (max-width: 800px) {
   #login-page .login-form {
     margin-top: 30%;
   }
 }
-
 #login-page .login-form .form-header {
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
-
 #login-page .login-form .form-header h2 {
   font-weight: 700;
   font-family: sans-serif;
   font-size: 22px;
   color: white;
 }
-
 #login-page .login-form .form-header span {
-  color: #afafaf;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(175, 175, 175);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 #login-page .login-form .form-header span a {
   color: orange;
   margin-left: 5px;
   font-size: 15px;
 }
-
 #login-page .login-form .passfield {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #login-page .login-form .passfield .eye {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
-
 #login-page .login-form .passfield i {
   margin-top: -5px;
   margin-left: 30px !important;
 }
-
 #login-page .login-form .form-field {
   margin: 20px 0;
   padding: 5px 10px;
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #272626 !important;
+  flex-direction: column;
+  background-color: rgb(39, 38, 38) !important;
   max-width: 300px;
   min-width: 300px;
   background: rgba(15, 14, 14, 0.8);
   border: 3px solid white;
 }
-
 #login-page .login-form .form-field:hover {
   border: 4px solid orange;
 }
-
 #login-page .login-form .form-field label {
-  color: #aaaaaa;
+  color: rgb(170, 170, 170);
   font-size: 15px;
 }
-
 #login-page .login-form .form-field input {
   background: transparent;
   outline: 0;
   color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 #login-page .login-form .form-actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
 }
-
 #login-page .login-form .form-actions button {
   display: inline-block;
   padding: 15px 20px;
@@ -1186,35 +859,22 @@ input {
   border: none;
   cursor: pointer;
 }
-
 #login-page .login-form .form-actions button:hover {
   border: 4px solid white;
 }
-
 @media screen and (min-width: 300px) and (max-width: 800px) {
   #login-page .login-form {
     margin-left: 0 !important;
   }
   #login-page .login-form .passfield {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   #login-page .login-form .passfield .eye {
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   #login-page .top {
     border-bottom: 0;
@@ -1224,16 +884,9 @@ input {
   }
   #login-page .top .mobile {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    flex-direction: row;
+    justify-content: end;
     padding-right: 20px;
     padding-top: 2px;
   }
@@ -1248,34 +901,22 @@ input {
     height: 100%;
     gap: 10px;
     padding-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    flex-direction: column;
+    justify-content: right;
     position: fixed;
     height: 100vh;
     width: 300px;
     right: -2000px;
     top: 0;
     margin-left: 50%;
-    background-color: #333333;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    background-color: rgb(51, 51, 51);
+    align-items: start;
     color: black !important;
-    -webkit-transition: 0.3s !important;
     transition: 0.3s !important;
   }
   #login-page .mobile-navbar .cancel {
     padding-top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: white;
     padding-bottom: 20px;
@@ -1287,9 +928,7 @@ input {
     padding-top: 20px;
     list-style: none;
     color: white;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     text-align: center;
   }
   #login-page .mobile-navbar li .active {
@@ -1326,17 +965,14 @@ input {
 #signup-page {
   height: 100%;
   width: 100%;
-  background-color: #1d1d1d;
+  background-color: rgb(29, 29, 29);
 }
-
 #signup-page .mobile-navbar {
   display: none;
 }
-
 #signup-page input {
   border: 0;
 }
-
 #signup-page .signup-form {
   max-width: 700px;
   padding: 20px;
@@ -1346,31 +982,20 @@ input {
   margin-top: 5% !important;
   padding-right: 40px;
 }
-
 #signup-page .signup-form .name-fields {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify !important;
-      -ms-flex-pack: justify !important;
-          justify-content: space-between !important;
+  flex-direction: row;
+  justify-content: space-between !important;
   max-width: 500px;
   min-width: 300px;
   gap: 20px;
 }
-
 @media screen and (max-width: 700px) {
   #signup-page .signup-form .name-fields {
-    -ms-flex-wrap: wrap !important;
-        flex-wrap: wrap !important;
+    flex-wrap: wrap !important;
     gap: 20px !important;
   }
 }
-
 #signup-page .signup-form .name-field {
   border-radius: 20px !important;
   margin-bottom: 0;
@@ -1378,44 +1003,26 @@ input {
   width: 240px !important;
   padding: 5px 10px;
   border-radius: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #272626 !important;
+  flex-direction: column;
+  background-color: rgb(39, 38, 38) !important;
   background: rgba(15, 14, 14, 0.8);
 }
-
 #signup-page .signup-form .name-field:hover {
   border: 4px solid orange;
 }
-
 #signup-page .form-header {
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
 }
-
 #signup-page .form-header p {
   font-size: 15px;
   color: grey;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 #signup-page .form-header h2 {
   margin-top: -10px;
   font-weight: 700;
@@ -1423,57 +1030,45 @@ input {
   font-size: 30px;
   color: white;
 }
-
 #signup-page .form-header h2 span {
   color: orange;
   font-size: 30px;
 }
-
 #signup-page .form-header span {
   margin-top: -15px;
-  color: #afafaf;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(175, 175, 175);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 #signup-page .form-header span a {
   color: orange;
 }
-
 #signup-page .form-field {
   margin: 20px 0;
   padding: 5px 10px;
   border: solid 1px white;
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #272626 !important;
+  flex-direction: column;
+  background-color: rgb(39, 38, 38) !important;
   max-width: 485px;
   min-width: 300px;
   background: rgba(15, 14, 14, 0.8);
 }
-
 #signup-page .form-field:hover {
   border: 4px solid orange;
 }
-
 #signup-page .form-field label,
 #signup-page .name-field label {
   padding: 5px;
-  color: #aaaaaa;
+  color: rgb(170, 170, 170);
   font-size: 15px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-
 #signup-page .form-field input,
 #signup-page .name-field input {
   outline: none;
-  background-color: #272626 !important;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgb(39, 38, 38) !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 0 15px;
   border-radius: 40px;
   color: white;
@@ -1481,37 +1076,20 @@ input {
   background: transparent;
   padding-bottom: 5px;
 }
-
 #signup-page .passfield {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 #signup-page .passfield .eye {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-      -ms-flex-direction: column !important;
-          flex-direction: column !important;
-  -webkit-box-align: center !important;
-      -ms-flex-align: center !important;
-          align-items: center !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
-
 #signup-page .form-actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
 }
-
 #signup-page .form-actions button {
   display: inline-block;
   padding: 15px 20px;
@@ -1524,71 +1102,46 @@ input {
   border: none;
   cursor: pointer;
 }
-
 #signup-page .form-actions button:hover {
   border: 4px solid white;
 }
-
 #signup-page .top {
   position: relative;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid grey;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 7vh;
   margin: 0 !important;
 }
-
 #signup-page .top .navbar {
   width: 74%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #signup-page .top .navbar a {
   text-decoration: none !important;
   color: #fff !important;
 }
-
 #signup-page .top .navbar ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 25px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #signup-page .top .navbar ul .active {
   color: orange !important;
 }
-
 #signup-page .top .navbar ul li {
   list-style: none;
   color: #fff;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
-
 #signup-page .top .navbar ul li a:hover {
   color: orange !important;
 }
-
 @media screen and (min-width: 300px) and (max-width: 800px) {
   #signup-page .signup-form {
     margin-left: 0 !important;
@@ -1617,16 +1170,9 @@ input {
   }
   #signup-page .top .mobile {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    flex-direction: row;
+    justify-content: right;
     padding-right: 20px;
     padding-top: 2px;
   }
@@ -1644,34 +1190,22 @@ input {
     margin-top: 0 !important;
     gap: 10px;
     padding-top: 20px;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    flex-direction: column;
+    justify-content: right;
     position: fixed;
     height: 100% !important;
     width: 300px;
     right: -2000px;
     top: 0;
     margin-left: 50%;
-    background-color: #333333;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    background-color: rgb(51, 51, 51);
+    align-items: start;
     color: black !important;
-    -webkit-transition: 0.3s !important;
     transition: 0.3s !important;
   }
   #signup-page .mobile-navbar .cancel {
     padding-top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: white;
     padding-bottom: 20px;
@@ -1683,9 +1217,7 @@ input {
     padding-top: 20px;
     list-style: none;
     color: white;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     text-align: center;
   }
   #signup-page .mobile-navbar li .active {
@@ -1723,7 +1255,7 @@ input {
   body {
     margin: 0;
     padding: 0;
-    background-color: #0e0b0b !important;
+    background-color: rgb(14, 11, 11) !important;
     width: 100%;
   }
   .top {
@@ -1733,16 +1265,9 @@ input {
   }
   .top .mobile {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    flex-direction: row;
+    justify-content: right;
     padding-right: 20px;
     padding-top: 20px;
   }
@@ -1753,34 +1278,22 @@ input {
   .top .mobile-navbar {
     gap: 10px;
     padding-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    flex-direction: column;
+    justify-content: right;
     position: fixed;
     height: 100vh;
     width: 300px;
     right: -320px;
     top: 0;
     margin-left: 50%;
-    background-color: #333333;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    background-color: rgb(51, 51, 51);
+    align-items: start;
     color: black !important;
-    -webkit-transition: 0.3s !important;
     transition: 0.3s !important;
   }
   .top .mobile-navbar .cancel {
     padding-top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: white;
     padding-bottom: 20px;
@@ -1792,9 +1305,7 @@ input {
     padding-top: 20px;
     list-style: none;
     color: white;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     text-align: center;
   }
   .top .mobile-navbar li .active {
@@ -1830,33 +1341,20 @@ input {
     display: none;
   }
   #first-reservation {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
     gap: 10px;
   }
   .booking-fields {
     margin-top: -50%;
     margin-right: -3000px;
-    -webkit-transition: 0.3s;
     transition: 0.3s;
     height: 80%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     width: 100%;
   }
@@ -1868,25 +1366,14 @@ input {
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .banner .mid-button {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 70%;
   }
@@ -1914,7 +1401,7 @@ input {
     text-align: center;
     width: 100%;
     text-transform: capitalize;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 8vw;
     font-weight: 700;
   }
@@ -1930,20 +1417,12 @@ input {
   }
   .banner .mobile-ticket {
     width: 80%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    height: 300px  !important;
-    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    height: 300px !important;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     position: relative;
     z-index: 0;
@@ -1952,8 +1431,6 @@ input {
     border-radius: 10px;
   }
   .banner .mobile-ticket label {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 0 !important;
     gap: 3px;
@@ -1964,24 +1441,18 @@ input {
     font-size: 20px !important;
   }
   .banner .mobile-ticket span {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: white;
   }
   .banner .mobile-ticket form {
-    display: -ms-grid !important;
     display: grid !important;
-    -webkit-column-count: 2 !important;
-            column-count: 2 !important;
+    -moz-column-count: 2 !important;
+         column-count: 2 !important;
     row-gap: 10px;
-    -webkit-column-gap: 40px !important;
-            column-gap: 40px !important;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    -webkit-box-pack: right !important;
-        -ms-flex-pack: right !important;
-            justify-content: right !important;
+    -moz-column-gap: 40px !important;
+         column-gap: 40px !important;
+    grid-template-columns: auto auto;
+    justify-content: right !important;
   }
   .banner .mobile-ticket:before {
     content: "";
@@ -1992,25 +1463,17 @@ input {
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-            box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-    -webkit-filter: blur(10px);
-            filter: blur(10px);
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    filter: blur(10px);
   }
   .banner .mobile-ticket-buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     padding-bottom: 5px;
     padding-top: 25px;
     border-bottom: 1px solid grey;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   .banner .mobile-ticket-buttons button {
     border: 0;
@@ -2024,15 +1487,12 @@ input {
     margin-left: 0;
   }
   .banner .mobile-ticket-fields {
-    display: -ms-grid !important;
     display: grid !important;
-    -webkit-column-count: 2 !important;
-            column-count: 2 !important;
+    -moz-column-count: 2 !important;
+         column-count: 2 !important;
     row-gap: 30px;
     width: 100%;
-    -webkit-box-pack: space-evenly !important;
-        -ms-flex-pack: space-evenly !important;
-            justify-content: space-evenly !important;
+    justify-content: space-evenly !important;
     padding-top: 25px;
   }
   .banner .mobile-ticket-fields form {
@@ -2042,9 +1502,7 @@ input {
   .banner .mobile-ticket-fields .field {
     width: 90%;
     margin: auto;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .banner .mobile-ticket-fields select,
   .banner .mobile-ticket-fields #datepicker {
@@ -2065,12 +1523,10 @@ input {
     background-color: orange;
     border: 0;
     color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 4vw;
     text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .banner .mobile-ticket-fields-button button:hover {
     background-color: white;
@@ -2078,15 +1534,9 @@ input {
   }
   .banner .closure {
     width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-bottom: 0;
     margin-top: 7vh !important;
@@ -2112,15 +1562,12 @@ input {
     background: rgba(128, 128, 128, 0.8);
   }
   #ticket .ticket-header {
+    padding-top: 50px;
     width: 80%;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     border-bottom: 1px solid orange;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     color: white;
   }
   #ticket .ticket-header button {
@@ -2133,38 +1580,23 @@ input {
     margin-top: 20px !important;
     width: 80%;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     color: white;
   }
   #ticket .ticket-end {
     margin-top: -30px !important;
     width: 80%;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #ticket .ticket-end p {
     color: orange;
   }
   #ticket .ticket-end .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     gap: 10px;
   }
   #ticket .ticket-end .buttons button {
@@ -2180,28 +1612,18 @@ input {
     margin-top: 7vh !important;
     width: 80%;
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     height: auto !important;
   }
   .about-intro {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     color: white;
   }
   .about-intro .header {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 8vw;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 30px;
     width: 100%;
     font-weight: 700;
     text-align: center;
@@ -2209,7 +1631,7 @@ input {
   .about-intro .body {
     width: 100%;
     font-family: sans-serif;
-    font-size: 5vw;
+    font-size: 20px;
     text-align: center;
   }
   .about-buttons {
@@ -2217,15 +1639,9 @@ input {
     padding-bottom: 10px;
     margin-top: 30px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
   }
   .about-buttons .active {
     color: orange;
@@ -2241,56 +1657,63 @@ input {
     color: orange;
   }
   .about-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     gap: 20px;
   }
   .about-body-images {
-    width: 100% !important;
-    display: flexbox;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-            justify-content: space-between !important;
-    margin-top: 10px;
+    width: auto !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    margin-top: 20px;
+    gap: 20px;
   }
-  .about-body-images #last-image {
+  .about-body-images .upper-images {
     width: 300px;
-    height: 150px;
+    display: flex;
+    gap: 20px;
+    height: 200px;
   }
-  .about-body-images img {
+  .about-body-images .upper-images-1, .about-body-images .upper-images-2 {
+    width: 150px;
+    height: 100%;
+  }
+  .about-body-images .upper-images-1 img, .about-body-images .upper-images-2 img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
-    width: 120px;
-    height: 110px;
-    margin-top: 10px !important;
-    margin-left: 0 !important;
+  }
+  .about-body-images .lower-image {
+    width: 300px;
+    height: 200px;
+  }
+  .about-body-images .lower-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
   }
   .about-body-about {
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     color: white;
     margin-left: 0;
     margin-top: 20px;
     width: 100%;
   }
   .about-body-about a {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: orange;
     text-decoration: none;
+    font-style: italic;
   }
   .about-body-about .distance,
   .about-body-about .ratings {
@@ -2298,8 +1721,8 @@ input {
   }
   .about-body-about button {
     border: 0;
-    font-size: 4vw;
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 10px 15px;
     background-color: orange;
     border-radius: 10px;
     color: white;
@@ -2309,7 +1732,7 @@ input {
     margin-top: -10px;
   }
   .about-body-about .intro p {
-    font-size: 5vw;
+    font-size: 20px;
     font-family: sans-serif;
     font-weight: 100;
   }
@@ -2317,7 +1740,7 @@ input {
     display: none;
     font-size: 1.5vw;
     font-weight: 700;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
   .about-body-about .km {
     font-size: 20px;
@@ -2330,47 +1753,33 @@ input {
   }
   .about-body-about .hero {
     margin-top: -10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    flex-direction: row;
+    align-items: baseline;
     text-align: left;
   }
   .about-body-about .hero-header {
     font-weight: bold;
-    font-size: 6vw;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
   .about-body-about .hero-body {
     margin-left: 2px;
-    font-size: 4vw;
+    font-size: 20px;
     font-weight: 500;
   }
   .about-body-about .numbers {
     display: none !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     margin-top: 40px;
   }
   .about-body-about .numbers h4 {
     font-size: 1.2vw;
     font-weight: 100;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
   .about-body-about #rate {
     font-weight: 800;
@@ -2378,19 +1787,15 @@ input {
   }
   .about-body-about .people {
     display: none !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     text-align: left !important;
   }
   .about-body-about .people h4 {
     font-size: 1.2vw;
     font-weight: 100;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
   .services-section {
     background-image: url(Images/serviceback.jpg) !important;
@@ -2404,18 +1809,11 @@ input {
   .services {
     margin-top: 0 !important;
     width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     color: white;
   }
   .services .carousel-indicators {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 5px !important;
   }
@@ -2455,19 +1853,11 @@ input {
   .services .carousel-item .card {
     margin-left: 0;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
+    flex-direction: column;
+    align-items: left;
     height: auto;
-    -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     position: relative;
     z-index: 1;
@@ -2484,10 +1874,8 @@ input {
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-            box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-    -webkit-filter: blur(10px);
-            filter: blur(10px);
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    filter: blur(10px);
     margin: -20px;
   }
   .services .carousel-item .card h4 {
@@ -2509,27 +1897,16 @@ input {
     height: auto;
     margin-top: 15vh !important;
     width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin: auto;
   }
   .article-header {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     color: white;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid gray;
   }
   .article-header button {
@@ -2537,7 +1914,7 @@ input {
     padding: 0;
     border: 0;
     background: transparent;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 8vw;
     font-weight: 700;
   }
@@ -2546,18 +1923,11 @@ input {
   }
   .article-body {
     padding-top: 5vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 100%;
     margin: auto !important;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     height: auto !important;
     gap: 3vh;
   }
@@ -2566,40 +1936,24 @@ input {
     height: 500px;
     margin: auto !important;
     position: relative;
-    -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
-    background-color: #2c2b2b;
+    background-color: rgb(44, 43, 43);
     color: white;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   }
   .article-body .card:hover {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
+    transform: scale(1.05);
     z-index: 1;
   }
   .article-body .card img {
     width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .article-body .card-body {
     text-align: left;
@@ -2610,8 +1964,6 @@ input {
   .article-body .card-body a {
     color: orange !important;
     text-decoration: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .article-body .card-body p {
@@ -2619,13 +1971,8 @@ input {
   }
   .travellers {
     height: auto !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     height: 80vh;
     width: 80%;
     margin: auto;
@@ -2639,8 +1986,6 @@ input {
   }
   .travellers .carousel-indicators {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 10px;
   }
@@ -2653,31 +1998,22 @@ input {
     color: white;
   }
   .travellers-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .travellers-header p {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 8vw;
     font-weight: 700;
   }
   .travellers .travellers-body {
     margin-top: 5vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     flex-direction: column !important;
     gap: 40px;
   }
   .travellers .travellers-body .one,
   .travellers .travellers-body .two {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 20px;
   }
@@ -2693,23 +2029,14 @@ input {
   }
   .travellers .travellers-body .one .bio,
   .travellers .travellers-body .two .bio {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .travellers .travellers-body .one .bio .profile,
   .travellers .travellers-body .two .bio .profile {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     gap: 10px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .travellers .travellers-body .one .bio .profile-image img,
   .travellers .travellers-body .two .bio .profile-image img {
@@ -2720,45 +2047,30 @@ input {
   .footer {
     position: absolute;
     height: 5vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 100%;
     border-top: 1px solid grey;
     padding-top: 20px;
     color: white;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
   .footer-nav {
     width: 80%;
     margin: auto !important;
     display: flexbox;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
   .footer-nav ul {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     margin: auto;
   }
   .footer-nav ul li {
     list-style: none;
     text-align: center;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
