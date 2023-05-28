@@ -129,7 +129,7 @@ input {
   display: flex;
   border-bottom: 1px solid grey;
   align-items: center;
-  height: 7vh;
+  height: auto;
   margin: 0 !important;
 }
 .top .navbar {
