@@ -340,6 +340,7 @@ color: white;
     display: flex;
     color: white;
     align-items: center;
+    gap: 10px;
     .header {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -357,7 +358,7 @@ color: white;
   &-buttons {
     border-bottom: 1px solid grey;
     padding-bottom: 20px;
-    margin-top: 10vh;
+   margin-top: 40px;
     .active {
       color: orange;
     }
@@ -378,7 +379,7 @@ color: white;
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: space-between !important;
-margin-top: 20px;
+margin-top: 10px;
 gap: 20px;
       .upper-images{
         width: 400px;
@@ -694,9 +695,9 @@ margin-top: 5vh !important;
   width: 80%;
   margin: auto;
   color: white;
-  padding-top: 50px;
+  padding-top: 100px;
   .carousel {
-    margin-top: 5vh !important;
+    padding-top: 40px !important;
     height: auto;
     padding-bottom: 70px;
   }
@@ -722,7 +723,7 @@ margin-top: 5vh !important;
     }
   }
   .travellers-body {
-    margin-top: 50px;
+    margin-top: 0;
     display: flex;
     flex-direction: row;
     gap: 40px;
